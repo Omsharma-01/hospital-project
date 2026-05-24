@@ -1,0 +1,32 @@
+
+.btnpink{
+        background-color: #f64d86;
+    color: #fff;
+}
+
+.topbar{
+        background-color: #f64d86;
+    color: #fff;
+    
+
+}
+.topbar h5{
+    font-size: 14px;
+}
+
+.bookapp{
+    background-color: #fff;
+    color: #f64d86;
+    font-weight: 700;
+
+}
+.navbar-nav .nav-link.active {
+    color: #f64d86;
+        font-weight: 700;
+}
+a.nav-link {
+    color: black;
+        font-weight: 400;
+}
+;
+
