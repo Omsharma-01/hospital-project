@@ -28,5 +28,50 @@ a.nav-link {
     color: black;
         font-weight: 400;
 }
-;
+
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 25.25rem;
+    left: 15%;
+    padding-top: 3.25rem;
+    padding-bottom: 1.25rem;
+    color: var(--bs-carousel-caption-color);
+    text-align: start;
+}
+p.sub_title {
+    font-size: 35px;
+    font-weight: 600;
+    color: #8b1099;
+}
+.Compassionate { margin-top: 5px;
+    margin-bottom: -0.7rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+}
+p.sub_title {
+    font-size: 34px;
+    font-weight: 600;
+    color: pink;
+       margin-bottom: 0rem
+}
+.card-img {
+    height: 445px;
+}
+.form-control{
+    width: 450;
+    
+}
+.submit{
+    background-color: #f64d86;
+}
+
+
+
+
+
+
+
 

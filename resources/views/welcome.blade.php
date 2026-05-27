@@ -1,46 +1,93 @@
  @extends('layouts.app')
  @section('content')
-     
-<!-- Carousel -->
-<div id="carouselExampleDark" class="carousel carousel-dark slide">
-    
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="Assest/image/om.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Compassionate Care</h5>
-        <p>For You & Your Baby</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="Assest/image/om.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      <h5>Compassionate Care</h5>
-        <p>For You & Your Baby</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Assest/image/om.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-       <h5>Compassionate Care</h5>
-        <p>For You & Your Baby</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+     <!-- Carousel -->
+     <div id="carouselExampleDark" class="carousel carousel-dark slide">
+
+         <div class="carousel-indicators">
+             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true"
+                 aria-label="Slide 1"></button>
+             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                 aria-label="Slide 3"></button>
+         </div>
+         <div class="carousel-inner">
+             <div class="carousel-item active" data-bs-interval="10000">
+                 <img src="Assest/image/mother6.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                     <h1 class="compassionate">Compassionate Care</h1>
+                     <p class="sub_title">For You & Your Baby</p>
+                     <p>We provide complete care and support<br>
+                         throughout your pregnancy journey.</p>
+
+                     <button type="button" class="btn btn-primary btn-lg"> <i class="bi bi-calendar3"></i> Book
+                         Appointment</button>
+
+                     <button type="button" class="btn btn-outline-primary" disabled> <i class="bi bi-telephone"></i>
+                         Emergency Help </button>
+
+                 </div>
+             </div>
+             <div class="carousel-item" data-bs-interval="2000">
+                 <img src="Assest/image/mother2.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                     <h1 class="compassionate">Compassionate Care</h1>
+                     <p class="sub_title">For You & Your Baby</p>
+                     <p>We provide complete care and support<br>
+                         throughout your pregnancy journey.</p>
+
+                     <button type="button" class="btn btn-primary btn-lg"> <i class="bi bi-calendar3"></i> Book
+                         Appointment</button>
+
+                     <button type="button" class="btn btn-outline-primary" disabled> <i class="bi bi-telephone"></i>
+                         Emergency Help </button>
+
+                 </div>
+             </div>
+             <div class="carousel-item">
+                 <img src="Assest/image/mother3.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+
+                     <h1 class="compassionate">Compassionate Care</h1>
+                     <p class="sub_title">For You & Your Baby</p>
+                     <p>We provide complete care and support<br>
+                         throughout your pregnancy journey.</p>
+
+                     <button type="button" class="btn btn-primary btn-lg"> <i class="bi bi-calendar3"></i> Book
+                         Appointment</button>
+
+                     <button type="button" class="btn btn-outline-primary" disabled> <i class="bi bi-telephone"></i>
+                         Emergency Help </button>
+
+
+                 </div>
+             </div>
+         </div>
+
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Next</span>
+         </button>
+
+       
+     </div>
+
+<section>
+      <div class="card" style="width: 18rem;">
+             <div class="card-body">
+                 <h5 class="card-title">Card title</h5>
+                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                     content.</p>
+                 <a href="#" class="card-link">Card link</a>
+                 <a href="#" class="card-link">Another link</a>
+             </div>
+         </div>
+
+</section>
 
      <section id="About-Us">
          <div class="container border border-danger-subtle mt-5">
@@ -104,9 +151,10 @@
          </div>
      </section>
 
-     <section id="Our services">
-         <h1 class="text-white text-center mt-5">Our services</h1>
+     <!--our service -->
 
+     <section id="Our services">
+         <h1 class="text-dark text-center mt-5">OUR SERVICES: COMPREHENSIVE CARE FOR EVERY STEP.</h1>
 
          <!--card section-->
          <div class="container">
@@ -115,19 +163,15 @@
                      <div
                          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                          <div class="col p-4 d-flex flex-column position-static"> <strong
-                                 class="d-inline-block mb-2 text-warning">Welcome to the coding </strong>
-                             <h3 class="mb-0 text-white">Lets being the coding journery </h3>
-                             <p class="card-text mb-auto text-light">This is a wider card with supporting text below as a
-                                 natural
-                                 lead-in to additional content.</p> <a href="#"
-                                 class="icon-link gap-1 icon-link-hover stretched-link">
-                                 Continue reading
-                                 <svg class="bi" aria-hidden="true">
-                                     <use xlink:href="#chevron-right"></use>
-                                 </svg> </a>
+                                 class="d-inline-block mb-2 text-warning">PRENATAL CARED</strong>
+                             <h3 class="mb-0 text-dark"> Comprehensive Consultations, </h3>
+                             <p class="card-text mb-auto text-secondary">Experince doctors provinding<br>
+                                 regular check-ups,advanced ultrasounds,and<br>
+                                 personalized nutrition plans to ensure ahealthy pregnancy<br>
+                                 journey for both mother and child.</p>
                          </div>
                          <div class="col-auto d-none d-lg-block">
-                             <img src="Assest\image\6.jpeg" alt="" class="bd-placeholder-img" height="300"
+                             <img src="Assest\image\7m.jpg" alt="" class="card-img" height="400"
                                  width="300">
 
                              </svg>
@@ -138,19 +182,16 @@
                      <div
                          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                          <div class="col p-4 d-flex flex-column position-static"> <strong
-                                 class="d-inline-block mb-2 text-warning">Welcome to the coding </strong>
-                             <h3 class="mb-0 text-white">Lets being the coding journery </h3>
-                             <p class="card-text mb-auto text-light">This is a wider card with supporting text below as a
-                                 natural
-                                 lead-in to additional content.</p> <a href="#"
-                                 class="icon-link gap-1 icon-link-hover stretched-link">
-                                 Continue reading
-                                 <svg class="bi" aria-hidden="true">
-                                     <use xlink:href="#chevron-right"></use>
-                                 </svg> </a>
+                                 class="d-inline-block mb-2 text-warning">DELIVERY & NEONATAL CARE </strong>
+                             <h3 class="mb-0 text-dark">safe & Advanced Birthing </h3>
+                             <p class="card-text mb-auto text-secondary">Our state-of-the-art birthing suites<br>
+                                 and expert NICU team provide
+                                 round-the-clock<br> support to ensure
+                                 the safest delivery experience and<br>
+                                 specialized care for newborns.</p>
                          </div>
                          <div class="col-auto d-none d-lg-block">
-                             <img src="Assest\image\5.jpeg" alt="" class="bd-placeholder-img" height="300"
+                             <img src="Assest\image\8m.jpg" alt="" class="card-img" height="400"
                                  width="300">
 
                              </svg>
@@ -163,19 +204,15 @@
                      <div
                          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                          <div class="col p-4 d-flex flex-column position-static"> <strong
-                                 class="d-inline-block mb-2 text-warning">Welcome to the coding </strong>
-                             <h3 class="mb-0 text-white">Lets being the coding journery </h3>
-                             <p class="card-text mb-auto text-light">This is a wider card with supporting text below as a
-                                 natural
-                                 lead-in to additional content.</p> <a href="#"
-                                 class="icon-link gap-1 icon-link-hover stretched-link">
-                                 Continue reading
-                                 <svg class="bi" aria-hidden="true">
-                                     <use xlink:href="#chevron-right"></use>
-                                 </svg> </a>
+                                 class="d-inline-block mb-2 text-warning">POSTNATAL SUPPORT </strong>
+                             <h3 class="mb-0 text-dark">Healing & Recovery </h3>
+                             <p class="card-text mb-auto text-secondry">Dedicated postnatal recovery check-ups,<br>
+                                 breastfeeding guidance, and emotional <br>
+                                 well-being support to help you transition smoothly<br>
+                                 into motherhood with confidence.</p>
                          </div>
                          <div class="col-auto d-none d-lg-block">
-                             <img src="Assest\image\3.jpeg" alt="" class="bd-placeholder-img" height="300"
+                             <img src="Assest\image\6m.jpg" alt="" class="card-img" height="300"
                                  width="300">
 
                              </svg>
@@ -186,22 +223,17 @@
                      <div
                          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                          <div class="col p-4 d-flex flex-column position-static"> <strong
-                                 class="d-inline-block mb-2 text-warning">Welcome to the coding </strong>
-                             <h3 class="mb-0 text-white">Lets being the coding journery </h3>
-                             <p class="card-text mb-auto text-light">This is a wider card with supporting text below as a
-                                 natural
-                                 lead-in to additional content.</p> <a href="#"
-                                 class="icon-link gap-1 icon-link-hover stretched-link">
-                                 Continue reading
-                                 <svg class="bi" aria-hidden="true">
-                                     <use xlink:href="#chevron-right"></use>
-                                 </svg> </a>
+                                 class="d-inline-block mb-2 text-warning">PEDIATRIC HEALTH </strong>
+                             <h3 class="mb-0 text-dark">Holistic Child Care </h3>
+                             <p class="card-text mb-auto text-secondary">From routine well-child visits and timely<br>
+                                 vaccinations to managing acute childhood illnesses, <br>
+                                 we providecompassionate care to support your baby’s growth.</p><br>
                          </div>
                          <div class="col-auto d-none d-lg-block">
-                             <img src="Assest\image\3.jpeg" alt="" class="bd-placeholder-img" height="300"
+                             <img src="Assest\image\10m.jpg" alt="" class="card-img" height="300"
                                  width="300">
 
-                             </svg>
+
                          </div>
                      </div>
                  </div>
@@ -211,19 +243,15 @@
                      <div
                          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                          <div class="col p-4 d-flex flex-column position-static"> <strong
-                                 class="d-inline-block mb-2 text-warning">Welcome to the coding </strong>
-                             <h3 class="mb-0 text-white">Lets being the coding journery </h3>
-                             <p class="card-text mb-auto text-light">This is a wider card with supporting text below as a
-                                 natural
-                                 lead-in to additional content.</p> <a href="#"
-                                 class="icon-link gap-1 icon-link-hover stretched-link">
-                                 Continue reading
-                                 <svg class="bi" aria-hidden="true">
-                                     <use xlink:href="#chevron-right"></use>
-                                 </svg> </a>
+                                 class="d-inline-block mb-2 text-warning">REPRODUCTIVE HEALTH </strong>
+                             <h3 class="mb-0 text-dark">Expert Counseling </h3>
+                             <p class="card-text mb-auto text-secondary">Confidential and expert-led consultations
+                                 on family planning, fertility tracking, and <br>
+                                 reproductive health services tailored<br>
+                                 to your personal needs and life goals.</p>
                          </div>
                          <div class="col-auto d-none d-lg-block">
-                             <img src="Assest\image\3.jpeg" alt="" class="bd-placeholder-img" height="300"
+                             <img src="Assest\image\11m.jpg" alt="" class="card-img" height="400"
                                  width="300">
 
                              </svg>
@@ -234,19 +262,15 @@
                      <div
                          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                          <div class="col p-4 d-flex flex-column position-static"> <strong
-                                 class="d-inline-block mb-2 text-warning">Welcome to the coding </strong>
-                             <h3 class="mb-0 text-white">Lets being the coding journery </h3>
-                             <p class="card-text mb-auto text-light">This is a wider card with supporting text below as a
-                                 natural
-                                 lead-in to additional content.</p> <a href="#"
-                                 class="icon-link gap-1 icon-link-hover stretched-link">
-                                 Continue reading
-                                 <svg class="bi" aria-hidden="true">
-                                     <use xlink:href="#chevron-right"></use>
-                                 </svg> </a>
+                                 class="d-inline-block mb-2 text-warning">WOMEN'S WELLNESS</strong>
+                             <h3 class="mb-0 text-dark">Health & vitality</h3>
+                             <p class="card-text mb-auto text-secondary">Specialized postpartum exercise programs<br>
+                                 and professional pelvic floor therapy designed to
+                                 improve strength, flexibility, and
+                                 overall physical recovery after childbirth.</p> <br>
                          </div>
                          <div class="col-auto d-none d-lg-block">
-                             <img src="Assest\image\3.jpeg" alt="" class="bd-placeholder-img" height="300"
+                             <img src="Assest\image\1m.jpg" alt="" class="card-img" height="300"
                                  width="300">
 
                              </svg>
@@ -264,54 +288,57 @@
 
      <section id="contact-us">
          <div class="container border border-primary">
-             <h1 class="text-white text-center mt-5">contact-us</h1>
+             <h1 class="text-dark text-center mt-5">contact-us</h1>
+             <h3 class="text-dark text-center mt-2">Get in Touch- We're to support you.</h3>
+
              <form class="p-5">
                  <div class="row mb-3">
                      <div class="col">
-                         <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                         <i class="bi bi-person-fill"></i> <label for="exampleInputEmail1"
+                             class="form-labe text-secondary">Full Name</label>
+                         <input type="text" class="form-control" placeholder="Enter your name"
+                             aria-label="Full Name">
                      </div>
-                     <div class="col">
-                         <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                     </div>
+
                  </div>
                  <div class="mb-3">
-                     <label for="exampleInputEmail1" class="form-labe text-white">Email address</label>
+                     <i class="bi bi-envelope-fill"></i> <label for="exampleInputEmail1"
+                         class="form-labe text-secondary">Email Address</label>
                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                         placeholder="enter email">
-                     <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.
-                     </div>
+                         placeholder=" Enter your email ">
+
                  </div>
 
                  <div class="col-12">
-                     <label for="inputAddress" class="form-label text-white">Address</label>
-                     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                 </div>
-                 <div class="col-12">
-                     <label for="inputAddress2" class="form-label text-white">Address 2</label>
-                     <input type="text" class="form-control" id="inputAddress2"
-                         placeholder="Apartment, studio, or floor">
-                 </div>
+                     <i class="bi bi-telephone-fill"></i> <label for="exampleInputEmail1"
+                         class="form-labe text-secondary">Phone Number</label>
+                     <input type="text" class="form-control" id="inputPhone Number"
+                         placeholder=" Enter your phone number">
+                 </div> <br>
+
+                 <br>
                  <div class="col-md-3">
-                     <label for="inputCity" class="form-label text-white">City</label>
-                     <input type="text" class="form-control" id="inputCity">
-                 </div>
-                 <div class="col-md-3">
-                     <label for="inputState" class="form-label text-white">State</label>
+                     <label for="exampleInputEmail1" class="form-labe text-secondary">Topic</label>
                      <select id="inputState" class="form-select">
-                         <option selected>Choose...</option>
-                         <option>...</option>
-                     </select>
+                         <option selected>Appointment</option>
+                         <option>General Query</option>
+                         <option>Support</option>
+                         <option>feedback</option>
+                     </select><br>
                  </div>
                  <div class="col-md-2">
-                     <label for="inputZip" class="form-label  text-white">Zip</label>
-                     <input type="text" class="form-control" id="inputZip">
+
+                     <input type="text" class="form-control" id="inputZip" placeholder="Message">
                  </div>
                  <div class="mb-3 form-check">
                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                     <label class="form-check-label text-white" for="exampleCheck1 ">Check me out</label>
+                     <label class="form-check-label text-secondary" for="exampleCheck1 ">Check me out</label>
+
+
                  </div>
-                 <button type="submit" class="btn btn-primary">Submit</button>
+                 <button type="submit" class=" btn submit">Submit</button>
+
              </form>
-         </div>
+
      </section>
  @endsection
