@@ -10,6 +10,8 @@ Route::get('/', function () {
 
 // 2. Patient page ka route jise hum check karenge
 Route::get('/patient', [PatientController::class, 'getPatient']);
-Route::get('/patient/{name}', [PatientController::class, 'getpatientName']);
+Route::get('/patient/{name}/{id}', [PatientController::class, 'getpatientName']);
+Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
+Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
 
 
