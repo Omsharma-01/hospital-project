@@ -67,6 +67,20 @@ p.sub_title {
 .submit{
     background-color: #f64d86;
 }
+.card-body{
+     text-align: center;
+     
+   
+}
+.card{
+    margin-top: 10;
+    margin-left: 10;
+    height: 210;
+}
+.navbar-brand{
+    text-align: start;
+    margin-left:200;
+}
 
 
 

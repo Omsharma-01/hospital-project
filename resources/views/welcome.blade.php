@@ -72,22 +72,104 @@
              <span class="visually-hidden">Next</span>
          </button>
 
-       
-     </div>
 
-<section>
-      <div class="card" style="width: 18rem;">
-             <div class="card-body">
-                 <h5 class="card-title">Card title</h5>
-                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                     content.</p>
-                 <a href="#" class="card-link">Card link</a>
-                 <a href="#" class="card-link">Another link</a>
+     </div>
+     <!-- card section after carousel-->
+
+     <section>
+
+         <div class="container">
+             <div class="row">
+                 <div class="col-sm-6 col-md-4 col-lg-2">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
+                             <h5 class="card-title">Book appointment</h5>
+                             <p class="card-text">Schedule an appointment<br>
+                                 with our experienced<br>
+                                 doctord.</p>
+
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-4 col-lg-2">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-person-walking"></i>
+                             <h5 class="card-title">Pregnancy Tracker</h5>
+                             <p class="card-text">Track your pregnancy<br>
+                                 week by week and get<br>
+                                 timely reminders.</p>
+
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-4 col-lg-2">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-bus-front"></i>
+                             <h5 class="card-title">Emergency Care</h5>
+                             <p class="card-text">24*7 emergency support<br>
+                                 for you and<br>
+                                 your baby.</p>
+
+
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-4 col-lg-2">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-file-earmark-text"></i>
+                             <h5 class="card-title">Health Records</h5>
+                             <p class="card-text">Upload and manage<br>
+                                 your medical reports<br>
+                                 easily.</p>
+
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-4 col-lg-2">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-capsule-pill"></i>
+                             <h5 class="card-title">Medicine Reminder</h5>
+                             <p class="card-text">Get remider for your <br>
+                                 medicines and<br>
+                                 vitamins.</p>
+
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-4 col-lg-2">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-apple"></i>
+                             <h5 class="card-title">Diet & Tips</h5>
+                             <p class="card-text">Discover diet plans<br>
+                                 health tips and yoga<br>
+                                 for a heathly you.</p>
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <section>
+         <div class="container-fluid">
+             <div class="topbar p-2 rounded ms-5 me-5 mt-3 mb-3">
+                 <div class="row">
+                     <div class="col-2 text-end">
+                         <i class="bi bi-headset fs-1" style=""></i>
+                     </div>
+                     <div class="col-8">
+                         <h3>We Are Here For You! <br>
+                             <h6>Speak to our care expert anytime.</h6>
+                     </div>
+
+                 </div>
+
+                 <h4>
              </div>
          </div>
 
-</section>
+     </section>
 
      <section id="About-Us">
          <div class="container border border-danger-subtle mt-5">
