@@ -81,6 +81,27 @@ p.sub_title {
     text-align: start;
     margin-left:200;
 }
+.doctors-card{
+    display: block;
+    margin-right: auto;
+    margin-top: 20;
+    margin-left: auto;
+    height: 380;
+    width: 280;
+    background-color:rgb(240, 237, 234);
+    border-radius: 7px;
+}
+.search-icon{
+    display: inline;
+    background-color:white;
+    width: 100px;
+    height: 50px;
+}
+.appointment{
+    background-color: black;
+    color: #fff;
+}
+
 
 
 
