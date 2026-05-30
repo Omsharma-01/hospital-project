@@ -364,7 +364,7 @@
          </div>
      </section>
 
-     <!--prices-->
+     <!--contact-us-->
 
 
 
@@ -426,6 +426,237 @@
 
 
            
+
+     </section>
+
+     <!--Doctors-->
+
+     <section>
+         <div class="container-fluid">
+             <div class="doctor section ms-5 me-5 mt-3 mb-3">
+                 <div class="row">
+
+                     <div class="col text-center">
+                         <h4>Our Expert Doctors</h4>
+                         <h1>Meet Our Compassionate Medical Team</h1>
+                         <h3>Doctors Directory</h3>
+
+                     </div>
+
+                 </div>
+
+                 <h4>
+             </div>
+         </div>
+
+     </section>
+
+     <section>
+         <div class="container">
+             <div class="row">
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr. Anya sharma</h5>
+                         <h6>OB-GYN</h6>
+                         <h6>Fetal Medicince</h6>
+                         <p class="card-text"> About: Expert in Fetal Medicine and OB-GYN. I combine advanced clinical
+                             skills with deep compassion to ensure the best health outcomes for both mother and baby.</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr. Ben Carter</h5>
+                         <h6>Pediatrician</h6>
+                         <h6>Newborn Care</h6>
+                         <p class="card-text"> About:Specializing in Pediatrics and newborn health. Dedicated to providing
+                             gentle, expert care and helping parents navigate the early stages of their child's growth</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr. chloe Adams</h5>
+                         <h6>Fetal Medicince</h6>
+                         <h6>Newborn Care</h6>
+                         <p class="card-text"> About: Expert in newborn health and Fetal Medicine. I provide proactive,
+                             gentle care tailored to your baby's unique needs with patience and precision.</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr.Elena Kim</h5>
+                         <h6>OB-GYN</h6>
+                         <h6>High-Risk Pregnancy</h6>
+                         <p class="card-text"> About: Specializing in high-risk pregnancies with a focus on advanced
+                             monitoring and personalized care to ensure the safety of both mother and baby</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr. Franklin Bell</h5>
+                         <h6>OB-GYN</h6>
+                         <h6>Gynecological Surgery</h6>
+                         <p class="card-text"> About: Expert in Fetal Medicine and OB-GYN. I combine advanced clinical
+                             skills with deep compassion to ensure the best health outcomes for both mother and baby.</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr. Henry Page</h5>
+                         <h6>Locatin Consltant</h6>
+                         <h6>Personal Care</h6>
+                         <p class="card-text"> About: Expert in advanced gynecological surgeries. I combine precise
+                             surgical techniques with a commitment to patient comfort and rapid recovery</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr. sarah chen</h5>
+                         <h6>Neonatologist</h6>
+                         <h6>Newborn Care</h6>
+                         <p class="card-text"> About: Expert in neonatal care. My focus is on providing gentle,
+                             professional support to ensure your newborn receives the best start in life</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+                 <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
+                     <img src="Assest/image/mother2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                         <h5 class="card-title">Dr.Robert Lee</h5>
+                         <h6>NICu-Director</h6>
+                         <h6>Newborn Care</h6>
+                         <p class="card-text"> About: Expert in neonatal intensive care. I provide advanced clinical
+                             oversight and dedicated support to newborns, ensuring the highest quality of care during
+                             critical stages.</p>
+                         <button type="button" class="btn btn-outline-primary btn-sm"> View profile </button>
+                         <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
+                             Appointment</button>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+     </section>
+
+     <section>
+         <div class="container-fluid">
+             <div class="doctor section ms-5 me-5 mt-3 mb-3">
+                 <div class="row">
+
+                     <div class="col-8 text-start">
+                         <h6> Find a specilist to find nameh doctor at your more specilist</h6>
+
+                     </div>
+                     <div class="col-4 text-start" width:50px>
+                         <input placeholder="search" class="search-input">
+                         <div class="search-icon">
+                             <i class="bi bi-search"></i>
+                         </div>
+                     </div>
+
+                 </div>
+
+                 <h4>
+             </div>
+         </div>
+
+     </section>
+
+     <!--Appointment section-->
+
+     <section>
+         <div class="container-fluid">
+             <div class="appointment section">
+                 <div class="row">
+
+                     <div class="appointment col text-center  ">
+                         <h1>Book Your Appointment-Specializations</h1>
+
+                     </div>
+
+                 </div>
+
+                 <h4>
+             </div>
+         </div>
+
+     </section>
+
+     <section>
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-6 ">
+                     <div class="row">
+                         <div class="col-4 ">
+                             <div class="card">
+                                 <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
+                                     <h5 class="card-title">Book appointment</h5>
+                                     <p class="card-text">Schedule an appointment<br>
+                                         with our experienced<br>
+                                         doctord.</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-4 ">
+                             <div class="card">
+                                 <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
+                                     <h5 class="card-title">Book appointment</h5>
+                                     <p class="card-text">Schedule an appointment<br>
+                                         with our experienced<br>
+                                         doctord.</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-4 ">
+                             <div class="card">
+                                 <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
+                                     <h5 class="card-title">Book appointment</h5>
+                                     <p class="card-text">Schedule an appointment<br>
+                                         with our experienced<br>
+                                         doctord.</p>
+                                     < </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-6">
+                         oooo
+                     </div>
+
+
+
+                 </div>
+             </div>
 
      </section>
  @endsection
