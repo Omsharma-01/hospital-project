@@ -17,10 +17,10 @@ motherhood is special <br> we are here to support you every step of the way
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
     </div>ṣ
 </section>
-
-<section id="contact-us">
+{{-- 
+<section id="Pregnancy guide">
          <div class="container border border-primary">
-             <h1 class="text-dark text-center mt-5">contact-us</h1>
+             <h1 class="text-dark text-center mt-5">Pregnancy Guide</h1>
              <h3 class="text-dark text-center mt-2">Get in Touch- We're to support you.</h3>
 
              <form class="p-5">
@@ -70,4 +70,4 @@ motherhood is special <br> we are here to support you every step of the way
                  </div>
                  <button type="submit" class=" btn submit">Submit</button>
 
-             </form>
+             </form> --}}
