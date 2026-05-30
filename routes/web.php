@@ -18,4 +18,8 @@ Route::get('/admin/hospital/list', [HospitalController::class, 'index']);
 Route::get('/admin/hospital/create', [HospitalController::class, 'create']);
 Route::post('/admin/hospital/store', [HospitalController::class, 'store'])
     ->name('hospital.store');
+Route::get('/patient/{name}/{id}', [PatientController::class, 'getpatientName']);
+Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
+// Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
+
 
