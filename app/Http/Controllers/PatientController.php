@@ -1,33 +1,80 @@
+
 <?php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Hospital;
 
-class PatientController extends Controller
+class getPatientController extends Controller
 {
-    //
-    function getPatient(){
-        //return "My new Hospital";
-        return view('patient');
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        $data = Patient::orderBy('id', 'desc')->get();
+      return view('admin.patient.list', compact('data'));
     }
 
-    function aboutpatient(){
-        return " hello this is patient ";
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+      return view('admin.patient.create');
+        
     }
 
-    function getpatientName(Request $request, $name='nik' ,$id=1){
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        Patient::create([
+            'patient_name' => $request->patient_name,
+            'Appointment' => $request->Appointment,
+            'Doctor' => $request->Doctor,
+            'Prescription' => $request->Prescription,
+            'Lab_Test' => $request->Lab_Test,
+            'Heath_records' => $request->Heath_records,
+            'Notification' => $request->Notification,
+            'status' => $request->status,
+        ]);
 
-        // dump($request->get('q'));
-        $fullname = $request->get('q');
-        $roll = $request->get('roll_no');
-        // return " hello this is patient name " . $name;
-        return view('getpatient',['data'=>$name , 'id'=>$id  , 'full_name' =>$fullname  , 'roll_no' => $roll ]);
+        return redirect('admin/patient/list')
+                         ->with('success', 'Patient added successfully');
     }
-    
-    // function getpatientName($name){
-    //     // return " hello this is patient name " . $name;
-    //     return view('pregnancy_guide',['name'=>$pregnancy_guide]);
-    // }
 
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
 }
