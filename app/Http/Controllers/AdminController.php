@@ -16,5 +16,11 @@ class AdminController extends Controller
        public function create(){
         return view(admin.layout.hospitalcreate);
     }
+
+    
+       public function patient(){
+        return view(admin.patient.hospitalpatient);
+    }
+    
     
 }

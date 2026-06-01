@@ -22,4 +22,8 @@ Route::get('/patient/{name}/{id}', [PatientController::class, 'getpatientName'])
 Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
 // Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
 
+// Route::get('/admin/patient/medican', [getPatientController::class, 'index']);
+// Route::get('/admin/patient/name', [getPatientController::class, 'create']);
+// Route::post('/admin/patient/store', [getPatientController::class, 'store'])
+//     ->name('patient.store');
 
