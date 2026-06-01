@@ -245,12 +245,13 @@
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
                 <i class="menu-icon mdi mdi-card-text-outline"></i>
-                <span class="menu-title">Form elements</span>
+                <span class="menu-title">Ambulance</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="form-elements">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/ambulance/create">Create</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/ambulance/list">List</a></li>
                 </ul>
               </div>
             </li>
@@ -269,12 +270,13 @@
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
                 <i class="menu-icon mdi mdi-table"></i>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">Doctors</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="tables">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Create</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">List</a></li>
                 </ul>
               </div>
             </li>
