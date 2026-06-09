@@ -6,8 +6,8 @@
                  <div class="col-12 grid-margin stretch-card">
                      <div class="card">
                          <div class="card-body">
-                             <h4 class="card-title">Basic form elements</h4>
-                             <p class="card-description"> Basic form elements </p>
+                             <h4 class="card-title">Add Ambulance</h4>
+                             <p class="card-description"> Ambulance Details Registration </p>
                              <form action="{{ route('ambulance.store') }}" method="POST" class="forms-sample">
 
                                  @csrf

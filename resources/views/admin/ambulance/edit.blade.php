@@ -6,37 +6,32 @@
                  <div class="col-12 grid-margin stretch-card">
                      <div class="card">
                          <div class="card-body">
-                             <h4 class="card-title">Add Hospital</h4>
-                             <p class="card-description"> Hospital Registration Details </p>
-                             <form action="{{ route('hospital.store') }}" method="POST" class="forms-sample">
+                             <h4 class="card-title">Edit Ambulance</h4>
+                             <p class="card-description"> edit </p>
+                             <form action="{{ route('ambulance.store', $data->id) }}" method="POST" class="forms-sample">
 
                                  @csrf
                                  {{-- /secure key --}}
 
                                  <div class="form-group">
-                                     <label for="exampleInputName1">Name</label>
-                                     <input type="text" name='name' class="form-control" id="exampleInputName1"
-                                         placeholder="Name">
+                                     <label for="exampleInputName1"> Ambulance Name</label>
+                                     <input type="text" name='ambulance_name' class="form-control" id="exampleInputName1"
+                                         placeholder="Name" value="{{ $data->ambulance_name }}">
                                  </div>
 
                                  <div class="form-group">
-                                     <label for="exampleTextarea1">Address</label>
-                                     <textarea name='address' class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                                     <label for="exampleTextarea1">Ambulance no</label>
+                                     <input name='ambulance_no' class="form-control" id="exampleTextarea1" value="{{ $data->ambulance_no }}"></input>
                                  </div>
                                  <div class="form-group">
-                                     <label for="exampleInputEmail3">Email address</label>
-                                     <input type="email" name='email' class="form-control" id="exampleInputEmail3"
-                                         placeholder="Email">
+                                     <label for="exampleInputEmail3">driver name</label>
+                                     <input type="text" name='driver_name' class="form-control" id="exampleInputEmail3"
+                                         placeholder="driver name" value="{{ $data->driver_name }}" >
                                  </div>
                                  <div class="form-group">
-                                     <label for="exampleInputCity1">City</label>
-                                     <input type="text" name='city' class="form-control" id="exampleInputCity1"
-                                         placeholder="Location">
-                                 </div>
-                                 <div class="form-group">
-                                     <label for="exampleInputpincode">pin code</label>
-                                     <input type="number" name='pin_code' class="form-control" maxlength="6"
-                                         id="exampleInputpincode" placeholder="Location">
+                                     <label for="exampleInputCity1">address</label>
+                                     <input type="text" name='address' class="form-control" id="exampleInputCity1"
+                                         placeholder="Location" value="{{ $data->address }}">
                                  </div>
                                  <div class="form-group">
                                      <label>status</label>

@@ -48,7 +48,9 @@ class HospitalController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
+              $hospital = Hospital::findorfail($id);
+        return view('admin.hospital.view',compact('hospital') );
     }
 
     /**
@@ -56,7 +58,10 @@ class HospitalController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
+        $data = Hospital::findorfail($id);
+        
+        return view('admin.hospital.edit', compact('data')); 
     }
 
     /**
@@ -64,7 +69,19 @@ class HospitalController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $hospital = Hospital::findorfail($id);
+
+         $hospital->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'city' => $request->city,
+            'pin_code' => $request->pin_code,
+            'email' => $request->email,
+            'status' => $request->status
+        ]);
+
+        return redirect('admin/hospital/list')
+                         ->with('success', 'Hospital added successfully');
     }
 
     /**
@@ -72,6 +89,12 @@ class HospitalController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $hospital = Hospital::findorfail($id);
+
+        $hospital->delete();
+        //record deleted
+        
+        return redirect('admin/hospital/list')
+                         ->with('success', 'Hospital added successfully');
     }
 }

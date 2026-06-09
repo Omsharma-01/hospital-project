@@ -1,5 +1,4 @@
-
- @extends('admin.Paticent.admin.paticent.layout')
+ @extends('admin.layout.adminlayout')
  @section('content')
      <div class="main-panel">
          <div class="content-wrapper">
@@ -7,37 +6,37 @@
                  <div class="col-12 grid-margin stretch-card">
                      <div class="card">
                          <div class="card-body">
-                             <h4 class="card-title">paticent</h4>
-                             <p class="card-description"> Patient Information </p>
-                             <form action="{{ route('hospital.store') }}" method="POST" class="forms-sample">
+                             <h4 class="card-title">Edit Hospital</h4>
+                             <p class="card-description"> edit </p>
+                             <form action="{{ route('hospital.update', $data->id) }}" method="POST" class="forms-sample">
 
                                  @csrf
                                  {{-- /secure key --}}
 
                                  <div class="form-group">
-                                     <label for="exampleInputName1">Name </label>
-                                     <input type="text" name='name' class="form-control" id="exampleInputName1"
-                                         placeholder="Name">
+                                     <label for="exampleInputName1">Name</label>
+                                     <textarea name='name' class="form-control" id="exampleInputName1"
+                                         placeholder="Name" >{{ $data->name }}</textarea>
                                  </div>
 
                                  <div class="form-group">
                                      <label for="exampleTextarea1">Address</label>
-                                     <textarea name='address' class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                                     <textarea name='address' class="form-control" id="exampleTextarea1" rows="4"  >{{ $data->address }}</textarea>
                                  </div>
                                  <div class="form-group">
-                                     <label for="exampleInputEmail3">Blood Group</label>
+                                     <label for="exampleInputEmail3">Email address</label>
                                      <input type="email" name='email' class="form-control" id="exampleInputEmail3"
-                                         placeholder="Email">
+                                         placeholder="Email" value="{{ $data->email }}">
                                  </div>
                                  <div class="form-group">
-                                     <label for="exampleInputCity1">Age</label>
+                                     <label for="exampleInputCity1">City</label>
                                      <input type="text" name='city' class="form-control" id="exampleInputCity1"
-                                         placeholder="Location">
+                                         placeholder="Location" value="{{ $data->city }}">
                                  </div>
                                  <div class="form-group">
-                                     <label for="exampleInputpincode">Current Medications</label>
+                                     <label for="exampleInputpincode">pin code</label>
                                      <input type="number" name='pin_code' class="form-control" maxlength="6"
-                                         id="exampleInputpincode" placeholder="Location">
+                                         id="exampleInputpincode" placeholder="Location"  value="{{ $data->pin_code }}">
                                  </div>
                                  <div class="form-group">
                                      <label>status</label>
