@@ -19,82 +19,132 @@
 
 <body>
 
-    <section>
-        <div class="topbar p-2">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="d-flex gap-4  align-items-center">
-                            <h5>
-                                <i class="bi bi-clock-fill"></i> Emergency
-                            </h5>
-                            <h5>
-                                <i class="bi bi-telephone-fill"></i> +9198765 43210
-                            </h5>
-                            <h5>
-                                <i class="bi bi-envelope-fill"></i> info@mothercarehospital.com
-                            </h5>
-
-                        </div>
-
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex justify-content-end gap-5  align-items-center">
-                            <h5 class="mt-1">
-                                <i class="bi bi-person-fill"></i> Login/Register
-                            </h5>
-                            <button type="button" class="btn btn-sm bookapp"><i class="fas fa-calendar-alt"></i> Book
-                                Appointment</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!--navbar creation-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Top Header -->
+    <div class="topbar py-2">
         <div class="container">
-            <a class="navbar-brand" href="/">
-            <img src="Assest/image/logo2.png" alt="logo" class="img-fluid" style="width: 210px">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i
-                                class="bi bi-house-door-fill"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#Our services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#contact-us">Doctors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#contact-us">Appointment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#contact-us">Pregancy guide</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#contact-us">Contact Us</a>
-                    </li>
-                </ul>
-                </li>
-            </div>
-        </div>
-    </nav>
 
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <div class="d-flex flex-wrap gap-4 text-white">
+
+                        <span>
+                            <i class="bi bi-clock-fill me-1"></i>
+                            24/7 Emergency Support
+                        </span>
+
+                        <span>
+                            <i class="bi bi-telephone-fill me-1"></i>
+                            +91 98765 43210
+                        </span>
+
+                        <span>
+                            <i class="bi bi-envelope-fill me-1"></i>
+                            info@mothercarehospital.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="d-flex justify-content-lg-end align-items-center gap-3 mt-2 mt-lg-0">
+
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="bi bi-person-circle"></i>
+                            Login / Register
+                        </a>
+
+                        <a href="#appointment" class="btn btn-light btn-sm px-4 rounded-pill fw-semibold">
+                            <i class="bi bi-calendar-check-fill"></i>
+                            Book Appointment
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                <img src="Assest/image/logo2.png" alt="Mother Care Hospital" height="60">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about-us">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/service">
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/doctor">
+                            Doctors
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#appointment">
+                            Appointment
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pregnancy-guide">
+                            Pregnancy Guide
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="#appointment" class="btn appointment-btn rounded-pill px-4">
+                            Book Now
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
 
 
 
@@ -102,11 +152,128 @@
 
 
     <!--Footer-->
+    <footer class="bg-white border-top mt-5">
+        <div class="container py-5">
+            <div class="row g-4">
 
-    <footer class="py-5 text-center text-body-secondary bg-dark mt-5">
-        <p class="text-white">Blog template built for <a href="https://getbootstrap.com/">Coding Monkey</a> by <a
-                href="https://x.com/mdo">superhero@mdo</a>.</p>
-        <p class="mb-0"> <a href="#">Back to top</a> </p>
+                <!-- About -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="fw-bold" style="color:#f64d86;">
+                        Mother Care Hospital
+                    </h4>
+
+                    <p class="text-muted mt-3">
+                        We provide expert pregnancy care, maternity services,
+                        doctor consultations, and personalized guidance to ensure
+                        a healthy journey for every mother and baby.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-semibold mb-3">Quick Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="/" class="text-decoration-none text-dark">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="/about" class="text-decoration-none text-dark">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="/service" class="text-decoration-none text-dark">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="/doctor" class="text-decoration-none text-dark">
+                                Doctors
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="/appointment" class="text-decoration-none text-dark">
+                                Appointment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pregnancy Guide -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-semibold mb-3">Pregnancy Guide</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Prenatal Care</li>
+                        <li class="mb-2">Healthy Nutrition</li>
+                        <li class="mb-2">Safe Exercise</li>
+                        <li class="mb-2">Stress Management</li>
+                        <li class="mb-2">Vaccination Tips</li>
+                        <li class="mb-2">Labor Preparation</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-semibold mb-3">Contact Us</h5>
+
+                    <p class="mb-2">
+                        📍 Mother Care Hospital
+                    </p>
+
+                    <p class="mb-2">
+                        📞 +91 9876543210
+                    </p>
+
+                    <p class="mb-2">
+                        ✉ info@mothercarehospital.com
+                    </p>
+
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle me-2">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle me-2">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div style="background:#f64d86;">
+            <div class="container py-3">
+                <div class="row align-items-center">
+
+                    <div class="col-md-6 text-center text-md-start">
+                        <small class="text-white">
+                            © 2026 Mother Care Hospital. All Rights Reserved.
+                        </small>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white text-decoration-none">
+                            Back to Top ↑
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

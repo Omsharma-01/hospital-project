@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Http\Controllers;
@@ -6,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Hospital;
 
-class getPatientController extends Controller
+class PatientController extends Controller
 {
     /**
      * Display a listing of the resource.

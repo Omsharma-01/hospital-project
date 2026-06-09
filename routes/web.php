@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PatientController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\AmbulanceController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HospitalController;
+use App\Http\Controllers\PatientController;
+use Illuminate\Support\Facades\Route;
 
 // 1. Home page ka route
 Route::get('/', function () {
@@ -24,11 +25,17 @@ Route::get('/admin/ambulance/create', [AmbulanceController::class, 'create']);
 Route::post('/admin/ambulance/store', [AmbulanceController::class, 'store'])
     ->name('ambulance.store');
 Route::get('/patient/{name}/{id}', [PatientController::class, 'getpatientName']);
-Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
-// Route::get('/pregnancy-guide', [PregnancyController::class, 'getPregnancyGuide']);
+
+Route::get('/pregnancy-guide', [HomeController::class, 'getPregnancyGuide']);
 
 // Route::get('/admin/patient/medican', [getPatientController::class, 'index']);
 // Route::get('/admin/patient/name', [getPatientController::class, 'create']);
 // Route::post('/admin/patient/store', [getPatientController::class, 'store'])
 //     ->name('patient.store');
 
+Route::get('/about-us', [HomeController::class, 'getabout_us']);
+Route::get('/doctor', [HomeController::class, 'getdoctor']);
+Route::get('/service', [HomeController::class, 'getService']);
+Route::get('/viewprofile', [HomeController::class, 'getviewprofile']);
+Route::get('/contact', [HomeController::class, 'getcontact']);
+Route::get('/Appointment', [HomeController::class, 'getAppointment']);
