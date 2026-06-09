@@ -43,7 +43,7 @@
                                                         width="100"></td>
                                                 <td>{{ $row->service_name }}</td>
                                                 <td>{{ $row->description }}</td>
-                                                <td>{{ $row->price }}</td>
+                                                <td>RS {{ $row->price }} </td>
                                                 <td>{{ $row->duration }}</td>
                                                 <td>{{ $row->category }}</td>
                                                 {{-- <td>{{$row->file_upload}}</td> --}}
