@@ -14,7 +14,6 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Doctor List</h4>
-                            <p class="card-description"> Add class <code>.table</code>
                             </p>
                             <div class="table-responsive">
                                 <table class="table">
