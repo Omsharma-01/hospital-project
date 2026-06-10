@@ -190,7 +190,7 @@
                                  </div>
                                  <div class="info-content">
                                      <h6>Phone</h6>
-                                     <p class="mb-0">+91 9876543210</p>
+                                     <p class="mb-0">+91 7050505083</p>
                                  </div>
                              </div>
 
@@ -253,9 +253,9 @@
                                          <input type="date" class="form-control">
                                      </div>
 
-                                     <div class="col-md-12 mb-3">
+                                     <div class="col-md-6 mb-3">
                                          <select class="form-select">
-                                             <option>Select Department</option>
+                                             <option>Select Doctor</option>
                                              <option>Gynecology</option>
                                              <option>Pediatrics</option>
                                              <option>Cardiology</option>
@@ -264,7 +264,7 @@
                                          </select>
                                      </div>
 
-                                     <div class="col-12 mb-3">
+                                     <div class="col-6  mb-3">
                                          <textarea class="form-control" placeholder="Write Your Message"></textarea>
                                      </div>
 
