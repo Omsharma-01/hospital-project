@@ -11,9 +11,7 @@ use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 // 1. Home page ka route
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'home']);
 
 // 2. Patient page ka route jise hum check karenge
 Route::get('/patient', [PatientController::class, 'getPatient']);
@@ -91,6 +89,9 @@ Route::get('/pregnancy-guide', [HomeController::class, 'getPregnancyGuide']);
 Route::get('/about-us', [HomeController::class, 'getabout_us']);
 Route::get('/doctor', [HomeController::class, 'getdoctor']);
 Route::get('/service', [HomeController::class, 'getService']);
-Route::get('/viewprofile', [HomeController::class, 'getviewprofile']);
+Route::get('/viewprofile/{id}', [HomeController::class, 'getviewprofile']);
 Route::get('/contact', [HomeController::class, 'getcontact']);
 Route::get('/appointment', [HomeController::class, 'getAppointment']);
+
+Route::post('/appointment/store', [HomeController::class, 'appointment_store'])
+    ->name('appointment.store1');

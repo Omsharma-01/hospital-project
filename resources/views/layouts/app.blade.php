@@ -57,7 +57,7 @@
                             Login / Register
                         </a>
 
-                        <a href="#appointment" class="btn btn-light btn-sm px-4 rounded-pill fw-semibold">
+                        <a href="/appointment" class="btn btn-light btn-sm px-4 rounded-pill fw-semibold">
                             <i class="bi bi-calendar-check-fill"></i>
                             Book Appointment
                         </a>
@@ -115,7 +115,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#appointment">
+                        <a class="nav-link" href="/appointment">
                             Appointment
                         </a>
                     </li>
@@ -127,13 +127,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact-us">
+                        <a class="nav-link" href="/contact">
                             Contact
                         </a>
                     </li>
 
                     <li class="nav-item ms-lg-3">
-                        <a href="#appointment" class="btn appointment-btn rounded-pill px-4">
+                        <a href="/appointment" class="btn appointment-btn rounded-pill px-4">
                             Book Now
                         </a>
                     </li>
