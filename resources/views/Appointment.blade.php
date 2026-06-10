@@ -147,29 +147,30 @@
 
                              <div class="row">
 
-                                 <div class="col-md-6 mb-3">
+                                 <div class="col-md-12 mb-3">
                                      <input type="text" class="form-control" placeholder="Full Name">
                                  </div>
 
-                                 <div class="col-md-6 mb-3">
+                                 <div class="col-md-12 mb-3">
                                      <input type="email" class="form-control" placeholder="Email Address">
                                  </div>
-
                              </div>
-
-                             <div class="mb-3">
+                             <div class="col-md-12 mb-3">
                                  <input type="tel" class="form-control" placeholder="Phone Number">
                              </div>
-
-                             <div class="mb-3">
+                             <div class="col-md-12 mb-3">
                                  <select class="form-select">
-                                     <option>Select Department</option>
-                                     <option>Gynecology</option>
-                                     <option>Pediatrics</option>
-                                     <option>Fetal Medicine</option>
-                                     <option>Pregnancy Care</option>
+                                     <option>Select Doctor</option>
+                                     <option>Dr.Neha sharma</option>
+                                     <option>Dr.Priti Nayak</option>
+                                     <option>DR.Sanjeet kumar</option>
+                                     <option>Dr.Aman sharma  </option>
                                  </select>
                              </div>
+                             <div class="col-md-6 mb-3">
+    <input type="date" name="appointment_date" class="form-control">
+</div>
+</div>
 
                              <div class="mb-3">
                                  <input type="date" class="form-control">

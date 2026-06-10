@@ -93,4 +93,4 @@ Route::get('/doctor', [HomeController::class, 'getdoctor']);
 Route::get('/service', [HomeController::class, 'getService']);
 Route::get('/viewprofile', [HomeController::class, 'getviewprofile']);
 Route::get('/contact', [HomeController::class, 'getcontact']);
-Route::get('/Appointment', [HomeController::class, 'getAppointment']);
+Route::get('/appointment', [HomeController::class, 'getAppointment']);
