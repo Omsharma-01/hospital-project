@@ -8,7 +8,6 @@ class Doctor extends Model
 {
     protected $table = 'doctors';
 
-
     protected $fillable = [
         'doctor_name',
         'specialization',
@@ -17,7 +16,8 @@ class Doctor extends Model
         'experience',
         'fees',
         'file_upload',
-        'status'
-        
+        'status',
+        'about_us',
+
     ];
 }
