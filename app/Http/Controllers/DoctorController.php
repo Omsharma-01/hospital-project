@@ -47,6 +47,7 @@ class DoctorController extends Controller
             'email' => $request->email,
             'experience' => $request->experience,
             'fees' => $request->fees,
+            'about_us' => $request->about_us,
             'file_upload' => $filename,
             'status' => $request->status,
         ]);
@@ -99,6 +100,7 @@ class DoctorController extends Controller
             'email' => $request->email,
             'experience' => $request->experience,
             'fees' => $request->fees,
+            'about_us' => $request->about_us,
             'file_upload' => $filename,
             'status' => $request->status,
         ]);

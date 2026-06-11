@@ -15,7 +15,8 @@ class Service extends Model
         'price',
         'duration',
         'category',
-        'status'
+        'status',
+        'file_upload'
         
     ];
 }

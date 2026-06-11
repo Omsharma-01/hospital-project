@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Appointment;
 use App\Models\Doctor;
+use App\Models\Patient;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -47,26 +49,42 @@ class HomeController extends Controller
 
     public function getcontact()
     {
-        return view('contact');
+        $doctor = Doctor::where('status', 1)->get();
+
+        return view('contact', compact('doctor'));
     }
 
     public function getAppointment()
     {
-        return view('appointment');
+        $doctor = Doctor::where('status', 1)->get();
+
+        return view('appointment', compact('doctor'));
     }
 
     public function appointment_store(Request $request)
     {
+        $patient = Patient::create([
+            'patient_name' => $request->patient_name,
+            'age' => $request->age,
+            'gender' => $request->gender,
+            'phone_number' => $request->phone_number,
+            'boold_group' => $request->boold_group,
+            'address' => $request->address,
+            'assigned_doctor' => $request->doctor_id,
+            'status' => 1,
+        ]);
+
         Appointment::create([
             'patient_name' => $request->patient_name,
+            'patient_id' => $patient->id,
             'doctor_id' => $request->doctor_id,
             'appointment_date' => $request->appointment_date,
             'appointment_time' => $request->appointment_time,
             'reason' => $request->reason,
-
+            'status' => 0,
         ]);
 
-        return redirect('/appointment')
+        return redirect()->back()
             ->with('success', 'Appointment submitted successfully');
     }
 }
