@@ -22,7 +22,9 @@ class HomeController extends Controller
 
     public function getdoctor()
     {
-        return view('doctor');
+        $doctors = Doctor::where('status', 1)->get();
+
+        return view('doctor', compact('doctors'));
     }
 
     public function getService()

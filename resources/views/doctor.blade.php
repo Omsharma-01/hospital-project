@@ -2,49 +2,46 @@
  @section('content')
      <style>
          :root {
-             --primary: #d63384;
+             --primary: #f64d86;
+             --light: #fff5f8;
          }
 
          .doctor-section {
-             background: #fff8fb;
+             background: linear-gradient(to bottom, #fff, #fff5f8);
          }
 
          .section-badge {
-             background: rgba(214, 51, 132, .1);
+             background: rgba(246, 77, 134, .12);
              color: var(--primary);
-             padding: 10px 20px;
+             padding: 10px 25px;
              border-radius: 50px;
              font-weight: 600;
+             font-size: 14px;
          }
 
          .doctor-card {
+             background: #fff;
              border: none;
              border-radius: 25px;
              overflow: hidden;
-             transition: .4s;
-             box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-             background: #fff;
+             transition: .4s ease;
+             box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
              height: 100%;
          }
 
          .doctor-card:hover {
-             transform: translateY(-10px);
+             transform: translateY(-12px);
+             box-shadow: 0 20px 45px rgba(246, 77, 134, .18);
          }
 
          .doctor-img {
              position: relative;
-             overflow: hidden;
          }
 
          .doctor-img img {
-             height: 320px;
              width: 100%;
+             height: 350px;
              object-fit: cover;
-             transition: .5s;
-         }
-
-         .doctor-card:hover img {
-             transform: scale(1.08);
          }
 
          .exp-badge {
@@ -56,57 +53,94 @@
              padding: 8px 15px;
              border-radius: 30px;
              font-size: 13px;
+             font-weight: 600;
          }
 
          .status-badge {
              position: absolute;
              bottom: 15px;
              left: 15px;
-             background: #198754;
+             background: #28a745;
              color: #fff;
-             padding: 6px 15px;
+             padding: 7px 14px;
              border-radius: 30px;
-             font-size: 13px;
+             font-size: 12px;
          }
 
          .speciality {
+             display: inline-block;
              background: #fff0f6;
              color: var(--primary);
-             padding: 6px 12px;
-             border-radius: 20px;
-             font-size: 13px;
+             padding: 7px 14px;
+             border-radius: 30px;
+             font-size: 12px;
+             margin-right: 5px;
+             margin-bottom: 5px;
          }
 
          .rating {
              color: #ffc107;
          }
 
+         .doctor-name {
+             font-weight: 700;
+             color: #222;
+         }
+
          .social-links a {
+             width: 40px;
+             height: 40px;
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 50%;
+             background: #fff0f6;
              color: var(--primary);
-             font-size: 18px;
-             margin-right: 10px;
+             text-decoration: none;
+             margin-right: 8px;
+             transition: .3s;
+         }
+
+         .social-links a:hover {
+             background: var(--primary);
+             color: #fff;
+         }
+
+         .btn-profile {
+             border: 2px solid var(--primary);
+             color: var(--primary);
+             border-radius: 12px;
+             font-weight: 600;
+         }
+
+         .btn-profile:hover {
+             background: var(--primary);
+             color: #fff;
          }
 
          .btn-book {
              background: var(--primary);
-             color: white;
+             color: #fff;
+             border-radius: 12px;
+             font-weight: 600;
              border: none;
          }
 
          .btn-book:hover {
-             background: #bb2d75;
-             color: white;
+             background: #e43f77;
+             color: #fff;
          }
 
          .search-box {
-             border-radius: 50px;
+             border-radius: 60px;
              overflow: hidden;
-             box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+             background: #fff;
+             box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
          }
 
          .search-box input {
              border: none;
-             padding: 15px;
+             padding: 16px;
          }
 
          .search-box button {
@@ -114,6 +148,7 @@
              border: none;
          }
      </style>
+
      <section class="doctor-section py-5">
 
          <div class="container">
@@ -126,157 +161,92 @@
                  </span>
 
                  <h2 class="fw-bold mt-3">
-                     Meet Our Compassionate Medical Team
+                     Meet Our Expert Doctors
                  </h2>
 
-                 <p class="text-muted mx-auto" style="max-width:700px;">
-                     Experienced gynecologists, pediatricians, neonatologists,
-                     and maternity specialists dedicated to providing
+                 <p class="text-muted">
+                     Dedicated maternity specialists committed to providing
                      exceptional care for mothers and babies.
                  </p>
 
              </div>
-             <div class="col-lg-3 col-md-6 mb-4">
 
-                 <div class="doctor-card">
+             <div class="row g-4">
 
-                     <div class="doctor-img">
+                 {{-- {{ dump($doctors) }} --}}
+                 <!-- Doctor Card -->
+                 @foreach ($doctors as $doctor)
+                     <div class="col-lg-4 col-md-6">
 
-                         <img src="Assest/image/mother2.png" alt="doctor">
+                         <div class="doctor-card">
 
-                         <span class="exp-badge">
-                             15+ Years
-                         </span>
+                             <div class="doctor-img">
 
-                         <span class="status-badge">
-                             Available Today
-                         </span>
+                                 <img src="{{ asset('uploads/doctors/' . $doctor->file_upload) }}" alt="Doctor">
 
-                     </div>
+                                 <span class="exp-badge">
+                                     15+ Years
+                                 </span>
 
-                     <div class="p-4">
+                                 <span class="status-badge">
+                                     Available Today
+                                 </span>
 
-                         <h5 class="fw-bold">
-                             Dr. Anya Sharma
-                         </h5>
+                             </div>
 
-                         <div class="rating mb-2">
-                             <i class="bi bi-star-fill"></i>
-                             <i class="bi bi-star-fill"></i>
-                             <i class="bi bi-star-fill"></i>
-                             <i class="bi bi-star-fill"></i>
-                             <i class="bi bi-star-fill"></i>
-                             <small class="text-muted">(4.9)</small>
-                         </div>
+                             <div class="p-4">
 
-                         <div class="mb-3">
+                                 <h5 class="doctor-name">
+                                     {{ $doctor->doctor_name }}
+                                 </h5>
 
-                             <span class="speciality">
-                                 OB-GYN
-                             </span>
 
-                             <span class="speciality">
-                                 Fetal Medicine
-                             </span>
 
-                         </div>
+                                 <span class="speciality">
+                                     {{ $doctor->specialization }}
+                                 </span>
 
-                         <p class="text-muted small">
-                             Specialist in high-risk pregnancy,
-                             prenatal care, fetal monitoring,
-                             and safe delivery planning.
-                         </p>
+                                 <span class="speciality">
+                                     Fee RS: {{ $doctor->fees }}
+                                 </span>
 
-                         <div class="mb-3">
+                                 <p class="text-muted mt-3">
+                                     {{ $doctor->about_us }}
+                                 </p>
 
-                             <small>
-                                 <i class="bi bi-people-fill text-pink"></i>
-                                 2500+ Patients Treated
-                             </small>
+                                 {{-- <div class="mb-3">
+                                     <small>
+                                         <i class="bi bi-people-fill text-danger"></i>
+                                         2500+ Patients Treated
+                                     </small>
+                                 </div> --}}
 
-                             <br>
+                                 {{-- <div class="social-links mb-3">
+                                     <a href="#"><i class="bi bi-facebook"></i></a>
+                                     <a href="#"><i class="bi bi-linkedin"></i></a>
+                                     <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                                 </div> --}}
 
-                             <small>
-                                 <i class="bi bi-award-fill text-pink"></i>
-                                 Board Certified Specialist
-                             </small>
+                                 <div class="d-flex gap-2">
+                                     <a class="btn btn-profile w-50" href="{{ url('/viewprofile/' . $doctor->id) }}">
+                                         View Profile
+                                     </a>
 
-                         </div>
-
-                         <div class="social-links mb-3">
-
-                             <a href="#">
-                                 <i class="bi bi-facebook"></i>
-                             </a>
-
-                             <a href="#">
-                                 <i class="bi bi-linkedin"></i>
-                             </a>
-
-                             <a href="#">
-                                 <i class="bi bi-envelope-fill"></i>
-                             </a>
-
-                         </div>
-
-                         <div class="d-flex gap-2">
-
-                             <button class="btn btn-outline-secondary btn-sm w-50">
-                                 Profile
-                             </button>
-
-                             <button class="btn btn-book btn-sm w-50">
-                                 Appointment
-                             </button>
-
-                         </div>
-
-                     </div>
-
-                 </div>
-
-             </div>
-
-             <section class="py-5 bg-light">
-
-                 <div class="container">
-
-                     <div class="row align-items-center">
-
-                         <div class="col-lg-6">
-
-                             <h3 class="fw-bold">
-                                 Find Your Specialist
-                             </h3>
-
-                             <p class="text-muted">
-                                 Search doctors by name, specialty,
-                                 experience, or department.
-                             </p>
-
-                         </div>
-
-                         <div class="col-lg-6">
-
-                             <div class="input-group search-box">
-
-                                 <input type="text" class="form-control" placeholder="Search doctor, specialty...">
-
-                                 <button class="btn text-white px-4">
-
-                                     <i class="bi bi-search"></i>
-
-                                 </button>
+                                     <a class="btn btn-book w-50" href="{{ url('/appointment') }}">
+                                         Book Now
+                                     </a>
+                                 </div>
 
                              </div>
 
                          </div>
 
                      </div>
+                 @endforeach
 
-                 </div>
+             </div>
 
-             </section>
+         </div>
 
      </section>
  @endsection

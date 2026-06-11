@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
         integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="Assest/style/style.css">
+    <link rel="stylesheet" href="{{ asset('Assest/style/style.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -77,7 +77,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="/">
-                <img src="Assest/image/logo2.png" alt="Mother Care Hospital" height="60">
+                <img src="{{ asset('Assest/image/logo2.png') }}" alt="Mother Care Hospital" height="60">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">

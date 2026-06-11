@@ -12,6 +12,10 @@
              color: #f64d86;
          }
 
+         .Mother {
+             color: #f64d86;
+         }
+
          .hero-badge {
              background: #ffe5ee;
              color: #f64d86;
@@ -364,6 +368,59 @@
                  padding: 30px;
              }
          }
+
+         hero-image-box {
+             position: relative;
+             max-width: 550px;
+             margin-left: auto;
+         }
+
+         .hero-image {
+             width: 100%;
+             height: auto;
+             border-radius: 30px;
+             object-fit: cover;
+         }
+
+         .info-card {
+             position: absolute;
+             bottom: 25px;
+             right: -20px;
+             background: #fff;
+             padding: 15px 20px;
+             border-radius: 15px;
+             display: flex;
+             align-items: center;
+             gap: 12px;
+             box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+         }
+
+         .info-card i {
+             font-size: 32px;
+             color: #f64d86;
+         }
+
+         .info-card h5 {
+             margin: 0;
+             font-weight: 700;
+             color: #f64d86;
+         }
+
+         .info-card span {
+             font-size: 14px;
+             color: #666;
+         }
+
+         @media(max-width:991px) {
+             .hero-image-box {
+                 margin: 40px auto 0;
+             }
+
+             .info-card {
+                 right: 10px;
+                 bottom: 10px;
+             }
+         }
      </style>
      <!-- HERO SECTION -->
 
@@ -371,7 +428,7 @@
          <div class="container">
              <div class="row align-items-center">
 
-                 ```
+
                  <!-- Left Content -->
                  <div class="col-lg-6">
                      <span class="badge bg-light text-danger px-3 py-2 mb-3">
@@ -380,7 +437,7 @@
 
                      <h1 class="display-4 fw-bold">
                          Compassionate Care For
-                         <span class="text-danger">Mother & Baby</span>
+                         <span class="Mother">Mother & Baby</span>
                      </h1>
 
                      <p class="lead text-muted mt-3">
@@ -388,8 +445,8 @@
                          expert doctors, modern facilities, and personalized care.
                      </p>
 
-                     <div class="mt-4">
-                         <a href="#appointment" class="btn btn-danger btn-lg me-3">
+                     <div class="mt-4 ">
+                         <a href="#appointment" class="btn btn-danger btn-lg me-3 ">
                              <i class="bi bi-calendar-check"></i>
                              Book Appointment
                          </a>
@@ -417,15 +474,45 @@
                          </div>
                      </div>
                  </div>
+                 <div class="col-lg-6">
+                     <!-- Right Image -->
+                     <div class="hero-image-box ms-auto">
 
-                 <!-- Right Image -->
-                 <div class="col-lg-6 text-center">
-                     <img src="Assest/image/mother6.png" class="img-fluid hero-img" alt="Mother Care">
+                         <img src="Assest/image/mother6.png" class="img-fluid hero-image" alt="Mother Care Hospital">
+
+                         {{-- <div class="info-card">
+                             <i class="bi bi-heart-pulse-fill"></i>
+                             <div>
+                                 <h5>10K+</h5>
+                                 <span>Healthy Deliveries</span>
+                             </div>
+                         </div> --}}
+                     </div>
                  </div>
-
              </div>
          </div>
+
+
+         <!-- Right Image -->
+
+         <!-- Right Side Image -->
+         {{-- <div class="col-lg-6">
+                     <div class="hero-image-box ms-auto">
+
+                         <img src="Assest/image/mother6.png" class="img-fluid hero-image" alt="Mother Care Hospital">
+
+                         <div class="info-card">
+                             <i class="bi bi-heart-pulse-fill"></i>
+                             <div>
+                                 <h5>10K+</h5>
+                                 <span>Healthy Deliveries</span>
+                             </div>
+                         </div>
+
+                     </div>
+                 </div> --}}
          ```
+
 
      </section>
 
@@ -893,6 +980,7 @@
                  <!-- Service 1 -->
                  <div class="col-lg-4 col-md-6">
                      <div class="card service-card border-0 shadow-sm h-100">
+                         <img src="uploads/doctors/pa.jpg" class="card-img-top" alt="Prenatal Care">
 
                          <div class="card-body text-center p-4">
 
@@ -919,6 +1007,7 @@
                  <!-- Service 2 -->
                  <div class="col-lg-4 col-md-6">
                      <div class="card service-card border-0 shadow-sm h-100">
+                         <img src="uploads/doctors/pa.jpg" class="card-img-top" alt="Delivery Care">
 
                          <div class="card-body text-center p-4">
 
@@ -945,11 +1034,10 @@
                  <!-- Service 3 -->
                  <div class="col-lg-4 col-md-6">
                      <div class="card service-card border-0 shadow-sm h-100">
-
+                         <img src="uploads/doctors/psupp.jpg" class="card-img-top" alt="Postnatal Support">
                          <div class="card-body text-center p-4">
-
                              <div class="service-icon">
-                                 <i class="bi bi-heart"></i>
+                                 <i class="bi bi-people-fill"></i>
                              </div>
 
                              <h4 class="mt-4">Postnatal Support</h4>
@@ -971,7 +1059,7 @@
                  <!-- Service 4 -->
                  <div class="col-lg-4 col-md-6">
                      <div class="card service-card border-0 shadow-sm h-100">
-
+                         <img src="uploads/doctors/ch1.jpg" class="card-img-top" alt="Pediatric Care">
                          <div class="card-body text-center p-4">
 
                              <div class="service-icon">
@@ -997,7 +1085,7 @@
                  <!-- Service 5 -->
                  <div class="col-lg-4 col-md-6">
                      <div class="card service-card border-0 shadow-sm h-100">
-
+                         <img src="uploads/doctors/ch2.jpg" class="card-img-top" alt="Reproductive Health">
                          <div class="card-body text-center p-4">
 
                              <div class="service-icon">
@@ -1023,7 +1111,7 @@
                  <!-- Service 6 -->
                  <div class="col-lg-4 col-md-6">
                      <div class="card service-card border-0 shadow-sm h-100">
-
+                         <img src="uploads/doctors/ch3.jpg" class="card-img-top" alt="Women's Wellness">
                          <div class="card-body text-center p-4">
 
                              <div class="service-icon">
@@ -1388,98 +1476,46 @@
 
      <section>
          <div class="container">
+
              <div class="row">
-                 <div class="col-md-6 ">
-                     <div class="row">
-                         <div class="col-4 ">
-                             <div class="card">
-                                 <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
-                                     <h5 class="card-title">Book appointment</h5>
-                                     <p class="card-text">Schedule an appointment<br>
-                                         with our experienced<br>
-                                         doctord.</p>
-                                 </div>
-                             </div>
+                 <div class="col-4 ">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
+                             <h5 class="card-title">Book appointment</h5>
+                             <p class="card-text">Schedule an appointment<br>
+                                 with our experienced<br>
+                                 doctord.</p>
                          </div>
                      </div>
-                     <div class="row">
-                         <div class="col-4 ">
-                             <div class="card">
-                                 <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
-                                     <h5 class="card-title">Book appointment</h5>
-                                     <p class="card-text">Schedule an appointment<br>
-                                         with our experienced<br>
-                                         doctord.</p>
-                                 </div>
-                             </div>
+                 </div>
+                 <div class="col-4 ">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
+                             <h5 class="card-title">Book appointment</h5>
+                             <p class="card-text">Schedule an appointment<br>
+                                 with our experienced<br>
+                                 doctord.</p>
                          </div>
                      </div>
-                     <div class="row">
-                         <div class="col-4 ">
-                             <div class="card">
-                                 <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
-                                     <h5 class="card-title">Book appointment</h5>
-                                     <p class="card-text">Schedule an appointment<br>
-                                         with our experienced<br>
-                                         doctord.</p>
-                                     < </div>
-                                 </div>
-                             </div>
+                 </div>
+                 <div class="col-4 ">
+                     <div class="card">
+                         <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
+                             <h5 class="card-title">Book appointment</h5>
+                             <p class="card-text">Schedule an appointment<br>
+                                 with our experienced<br>
+                                 doctord.</p>
                          </div>
                      </div>
-                     <div class="col-md-6">
-                         oooo
-                     </div>
-
-
-
                  </div>
              </div>
+         </div>
+
+
+
+
+
+         </div>
 
      </section>
-
-     <!-- Contact -->
-     <div class="col-lg-3 col-md-6">
-         <h5 class="footer-title">Contact Us</h5>
-
-         <p>
-             <i class="bi bi-geo-alt-fill"></i>
-             Ranchi, Jharkhand, India
-         </p>
-
-         <p>
-             <i class="bi bi-telephone-fill"></i>
-             +91 98765 43210
-         </p>
-
-         <p>
-             <i class="bi bi-envelope-fill"></i>
-             info@mothercare.com
-         </p>
-
-         <p>
-             <i class="bi bi-clock-fill"></i>
-             Open 24/7
-         </p>
-     </div>
-
-     </div>
-
-     <hr>
-
-     <div class="row align-items-center text-center">
-         <div class="col-md-6 text-md-start">
-             <p class="copyright">
-                 © 2026 Mother Care Hospital. All Rights Reserved.
-             </p>
-         </div>
-
-         <div class="col-md-6 text-md-end">
-             <a href="#" class="footer-policy">Privacy Policy</a>
-             |
-             <a href="#" class="footer-policy">Terms & Conditions</a>
-         </div>
-     </div>
-     </div>
-     </footer>
  @endsection
