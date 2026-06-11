@@ -43,6 +43,10 @@
                         <td>{{ $doctor->fees }}</td>
                     </tr>
                     <tr>
+                        <th>About Us</th>
+                        <td>{{ $doctor->about_us }}</td>
+                    </tr>
+                    <tr>
                         <th>File Upload</th>
                         <td>{{ $doctor->file_upload }}</td>
                     </tr>

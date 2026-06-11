@@ -125,10 +125,21 @@ p.sub_title {
     height: 445px;
 }
 
-.form-control {
+/* .form-control {
     width: 450;
 
-}
+} */
+  .btn-pink {
+             background: var(--primary);
+             color: white;
+             border: none;
+             padding: 12px 30px;
+         }
+
+         .btn-pink:hover {
+             background: #bb2d75;
+             color: white;
+         }
 
 .submit {
     background-color: #f64d86;

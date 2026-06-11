@@ -44,6 +44,11 @@
                                          placeholder="fees">
                                  </div>
                                  <div class="form-group">
+                                     <label for="exampleTextarea1">About Us</label>
+                                     <textarea name='about_us' class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                                 </div>
+                                 </div>
+                                 <div class="form-group">
                                      <label for="exampleInputCity1">File Upload</label>
                                      <input type="file" name='file_upload' class="form-control" id="exampleInputCity1"
                                          placeholder="file_upload">

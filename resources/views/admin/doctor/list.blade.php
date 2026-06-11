@@ -29,6 +29,7 @@
                                             <th>Email</th>
                                             <th>Experience </th>
                                             <th>Fees</th>
+                                            <th>About Us</th>
                                             {{-- <th>File Upload</th> --}}
                                             <th>Status</th>
                                             <th>Action</th>
@@ -47,6 +48,7 @@
                                                 <td>{{ $row->email }}</td>
                                                 <td>{{ $row->experience }}</td>
                                                 <td>{{ $row->fees }}</td>
+                                                <td>{{ $row->about_us }}</td>
                                                 {{-- <td>{{$row->file_upload}}</td> --}}
 
                                                 <td>{{ $row->status === 1 ? 'Active ' : 'Inactive ' }}</td>

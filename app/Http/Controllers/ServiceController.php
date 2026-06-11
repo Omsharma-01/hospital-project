@@ -88,7 +88,7 @@ public function update(Request $request, string $id)
         $file->move(public_path('uploads/services'), $filename);
     }
 
-   Service::update([
+   $service->update([
         'service_name'   => $request->service_name,
         'description'=> $request->description,
         'price'         => $request->price,
