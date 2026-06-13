@@ -168,23 +168,24 @@
                                  <div class="col-md-6">
                                      <label class="form-label">Full Name</label>
                                      <input type="text" class="form-control" name="patient_name"
-                                         placeholder="Enter Full Name">
+                                         placeholder="Enter Full Name" required>
                                  </div>
 
                                  <div class="col-md-6">
                                      <label class="form-label">Phone Number</label>
                                      <input type="tel" class="form-control" name="phone_number"
-                                         placeholder="Enter Phone Number">
+                                         placeholder="Enter Phone Number" required>
                                  </div>
 
                                  <div class="col-md-6">
                                      <label class="form-label">Age</label>
-                                     <input type="number" class="form-control" name="age" placeholder="Enter Age">
+                                     <input type="number" class="form-control" name="age" placeholder="Enter Age"
+                                         required>
                                  </div>
 
                                  <div class="col-md-6">
                                      <label class="form-label">Gender</label>
-                                     <select class="form-select" name="gender">
+                                     <select class="form-select" name="gender" required>
                                          <option value="">Select Gender</option>
                                          <option value="Male">Male</option>
                                          <option value="Female">Female</option>
@@ -194,7 +195,7 @@
 
                                  <div class="col-md-6">
                                      <label class="form-label">Select Doctor</label>
-                                     <select class="form-select" name="doctor_id">
+                                     <select class="form-select" name="doctor_id" required>
                                          <option value="">Choose Doctor</option>
                                          @foreach ($doctor as $row)
                                              <option value="{{ $row->id }}">
@@ -205,7 +206,7 @@
                                  </div>
                                  <div class="col-md-6">
                                      <label class="form-label">Blood Group</label>
-                                     <select class="form-select" name="boold_group">
+                                     <select class="form-select" name="blood_group" required>
                                          <option value="">Select Blood Group</option>
                                          <option value="A+">A+</option>
                                          <option value="A-">A-</option>
@@ -220,21 +221,22 @@
 
                                  <div class="col-md-6">
                                      <label class="form-label">Address</label>
-                                     <input type="text" class="form-control" name="address" placeholder="Enter Address">
+                                     <input type="text" class="form-control" name="address" placeholder="Enter Address"
+                                         required>
                                  </div>
                                  <div class="col-md-6">
                                      <label class="form-label">Appointment Date</label>
-                                     <input type="date" name="appointment_date" class="form-control">
+                                     <input type="date" name="appointment_date" class="form-control" required>
                                  </div>
 
                                  <div class="col-md-6">
                                      <label class="form-label">Appointment Time</label>
-                                     <input type="time" name="appointment_time" class="form-control">
+                                     <input type="time" name="appointment_time" class="form-control" required>
                                  </div>
 
                                  <div class="col-12">
                                      <label class="form-label">Reason / Message</label>
-                                     <textarea class="form-control" rows="4" name="reason" placeholder="Write Your Message"></textarea>
+                                     <textarea class="form-control" rows="4" name="reason" placeholder="Write Your Message" required></textarea>
                                  </div>
 
                                  <div class="col-12">

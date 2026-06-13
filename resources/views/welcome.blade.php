@@ -446,7 +446,7 @@
                      </p>
 
                      <div class="mt-4 ">
-                         <a href="#appointment" class="btn btn-danger btn-lg me-3 ">
+                         <a href="{{ url('/appointment') }}" class="btn btn-danger btn-lg me-3 ">
                              <i class="bi bi-calendar-check"></i>
                              Book Appointment
                          </a>
