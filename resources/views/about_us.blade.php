@@ -109,8 +109,7 @@
 
                      <div class="about-image text-center">
 
-                         <img src="images/about-mothercare.jpg" class="img-fluid rounded-4 shadow"
-                             alt="Mother Care Hospital">
+                         <img src="uploads/doctors/psupp.jpg" class="img-fluid rounded-4 shadow" alt="Mother Care Hospital">
 
                      </div>
 
