@@ -34,6 +34,7 @@
 
              <!-- Section Heading -->
              <div class="text-center mb-5">
+
                  <span class="badge px-3 py-2" style="background:#f64d86;">
                      About Mother Care Hospital
                  </span>
