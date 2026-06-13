@@ -124,6 +124,9 @@
                         <div class="card-body text-center p-4">
 
                             <div class="service-icon">
+
+                                <img src="{{ asset('Assest/image/2.jpeg') }}" alt="Pregnancy Care" class="img-fluid"
+                                    style="width: 100%;">
                                 <i class="bi bi-heart-pulse-fill"></i>
                             </div>
 
@@ -150,7 +153,9 @@
                         <div class="card-body text-center p-4">
 
                             <div class="service-icon">
+                                <img src="Assest/image/2m.jpg" alt="Delivery Care" class="img-fluid" style="width: 100%;">
                                 <i class="bi bi-hospital-fill"></i>
+
                             </div>
 
                             <h4 class="mt-4">Delivery Care</h4>

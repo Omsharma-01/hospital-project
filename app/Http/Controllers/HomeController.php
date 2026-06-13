@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambulance;
 use App\Models\Appointment;
 use App\Models\Doctor;
 use App\Models\Patient;
@@ -59,6 +60,13 @@ class HomeController extends Controller
         $doctor = Doctor::where('status', 1)->get();
 
         return view('appointment', compact('doctor'));
+    }
+
+    public function getambulance()
+    {
+        $ambulance = Ambulance::where('status', 1)->get();
+
+        return view('ambulance', compact('ambulance'));
     }
 
     public function appointment_store(Request $request)

@@ -52,10 +52,15 @@
 
                     <div class="d-flex justify-content-lg-end align-items-center gap-3 mt-2 mt-lg-0">
 
-                        <a href="#" class="text-white text-decoration-none">
+
+                        @if (Auth::check())
+                            <a href="{{ url('logout') }}" class="text-white text-decoration-none">Logout</a>
                             <i class="bi bi-person-circle"></i>
-                            Login / Register
-                        </a>
+                        @else
+                            <a href="{{ url('login') }}" class="text-white text-decoration-none">Login</a>
+                            <i class="bi bi-person-circle"></i>
+                        @endif
+
 
                         <a href="/appointment" class="btn btn-light btn-sm px-4 rounded-pill fw-semibold">
                             <i class="bi bi-calendar-check-fill"></i>
@@ -129,6 +134,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">
                             Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ambulance">
+                            Ambulance
                         </a>
                     </li>
 
