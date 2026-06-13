@@ -34,6 +34,10 @@
                         <th>address</th>
                         <td>{{ $ambulance->address }}</td>
                     </tr>
+                    <tr>
+                        <th>File Upload</th>
+                        <td>{{ $doctor->file_upload }}</td>
+                    </tr>
 
 
                     <tr>

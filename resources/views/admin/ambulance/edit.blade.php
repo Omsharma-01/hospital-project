@@ -34,6 +34,13 @@
                                          placeholder="Location" value="{{ $data->address }}">
                                  </div>
                                  <div class="form-group">
+                                    <div class="form-group">
+                                    <label for="exampleInputCity1">File Upload</label>
+                                    <input type="file" name='file_upload' class="form-control" id="exampleInputCity1"
+                                        placeholder="file_upload">
+                                    <img src="{{ asset('uploads/ambulance/' . $data->file_upload) }}" width="100">
+
+                                </div>
                                      <label>status</label>
 
                                      <select name="status" class="form-control">

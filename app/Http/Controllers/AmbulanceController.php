@@ -21,7 +21,7 @@ class AmbulanceController extends Controller
      */
     public function create()
     {
-      return view('admin.ambulance.create' ,compact(''));
+      return view('admin.ambulance.create' );
         
     }
 
@@ -30,11 +30,21 @@ class AmbulanceController extends Controller
      */
     public function store(Request $request)
     {
+        
+        $filename = null;
+
+        if ($request->hasFile('file_upload')) {
+            $file = $request->file('file_upload');
+            $filename = time().'.'.$file->getClientOriginalExtension();
+
+            $file->move(public_path('uploads/ambulance'), $filename);
+        }
         Ambulance::create([
             'ambulance_name' => $request->ambulance_name,
             'ambulance_no' => $request->ambulance_no,
             'driver_name' => $request->driver_name,
             'address' => $request->address,
+            'file_upload' => $filename,
             'status' => $request->status
         ]);
 
@@ -68,11 +78,22 @@ class AmbulanceController extends Controller
     {
         $ambulance = Ambulance::findorfail($id);
 
+        $filename = $doctor->file_upload;
+
+        
+        if ($request->hasFile('file_upload')) {
+            $file = $request->file('file_upload');
+            $filename = time().'.'.$file->getClientOriginalExtension();
+            $file->move(public_path('uploads/doctors'), $filename);
+        }
+
+
           $Ambulance->update([
             'ambulance_name' => $request->ambulance_name,
             'ambulance_no' => $request->ambulance_no,
             'driver_name' => $request->driver_name,
             'address' => $request->address,
+            'file_upload' => $filename,
             'status' => $request->status
         ]);
 

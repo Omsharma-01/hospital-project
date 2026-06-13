@@ -185,7 +185,7 @@
               </a>
               <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="/admin/appointment/create"> Create </a></li>
+                  {{-- <li class="nav-item"> <a class="nav-link" href="/admin/appointment/create"> Create </a></li> --}}
                   <li class="nav-item"> <a class="nav-link" href="/admin/appointment/list"> List </a></li>
                 </ul>
               </div>

@@ -8,7 +8,7 @@
                          <div class="card-body">
                              <h4 class="card-title">Add Ambulance</h4>
                              <p class="card-description"> Ambulance Details Registration </p>
-                             <form action="{{ route('ambulance.store') }}" method="POST" class="forms-sample">
+                             <form action="{{ route('ambulance.store') }}" method="POST" class="forms-sample" enctype="multipart/form-data">
 
                                  @csrf
                                  {{-- /secure key --}}
@@ -32,6 +32,11 @@
                                      <label for="exampleInputCity1">address</label>
                                      <input type="text" name='address' class="form-control" id="exampleInputCity1"
                                          placeholder="Location">
+                                 </div>
+                                  <div class="form-group">
+                                     <label for="exampleInputCity1">File Upload</label>
+                                     <input type="file" name='file_upload' class="form-control" id="exampleInputCity1"
+                                         placeholder="file_upload">
                                  </div>
                                  <div class="form-group">
                                      <label>status</label>

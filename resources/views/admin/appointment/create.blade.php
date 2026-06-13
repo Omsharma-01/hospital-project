@@ -27,6 +27,15 @@
                                         @endforeach
                                     </select>
                                  </div>
+                                 {{-- <div class="form-group">
+                                     <label for="exampleTextarea1">patient </label>
+                                    <select class="form-control" name="patient_id">
+                                        @foreach ($patient as $row )
+                                        <option value={{ $row->id }}>{{$row->patient_name}}</option>
+                                            
+                                        @endforeach
+                                    </select>
+                                 </div> --}}
                                  <div class="form-group">
                                      <label for="exampleInputEmail3">Appointment Date</label>
                                      <input type="date" name='appointment_date' class="form-control" id="exampleInputEmail3"

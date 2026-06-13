@@ -206,7 +206,7 @@
                                  </div>
                                  <div class="col-md-6">
                                      <label class="form-label">Blood Group</label>
-                                     <select class="form-select" name="blood_group" required>
+                                     <select class="form-select" name="boold_group" required>
                                          <option value="">Select Blood Group</option>
                                          <option value="A+">A+</option>
                                          <option value="A-">A-</option>

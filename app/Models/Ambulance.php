@@ -14,6 +14,7 @@ class Ambulance extends Model
         'ambulance_no',
         'driver_name',
         'address',
+        'file_upload',
         'status'
         
     ];

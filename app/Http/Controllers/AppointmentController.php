@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Appointment;
 use App\Models\Doctor;
+// use App\Models\Patient;
 
 class AppointmentController extends Controller
 {
@@ -23,7 +24,8 @@ class AppointmentController extends Controller
     public function create()
     {
         $doctor = Doctor::get();
-      return view('admin.appointment.create' , compact('doctor'));
+        // $patient = Patient::get();
+      return view('admin.appointment.create' , compact('doctor' , ));
         
     }
 
@@ -32,9 +34,17 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
+
+
+
+
+      
+
+        
         Appointment::create([
             'patient_name' => $request->patient_name,
             'doctor_id' => $request->doctor_id,
+            'patient_id' => $request->patient_id,
             'appointment_date' => $request->appointment_date,
             'appointment_time' => $request->appointment_time,
             'reason' => $request->reason,
