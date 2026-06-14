@@ -249,7 +249,7 @@
                                  </div>
                              @endif
 
-                             <h3 class="mb-4 text-center text-danger">
+                             <h3 class="mb-4 text-center text-danger text-pink ">
                                  Appointment Form
                              </h3>
 

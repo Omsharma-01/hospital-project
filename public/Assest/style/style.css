@@ -2,7 +2,12 @@
     background: #f64d86;
     font-size: 14px;
 }
-
+.pink-color {
+    background: #f64d86 !important;
+}
+.text-pink {
+    color: #f64d86 !important;
+}
 .navbar {
     padding: 15px 0;
 }

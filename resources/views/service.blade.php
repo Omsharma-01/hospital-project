@@ -118,164 +118,57 @@
             <div class="row g-4">
 
                 <!-- Service 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card border-0 shadow-sm h-100">
+                <div class="row g-4">
+                    @foreach ($services as $service)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card service-card border-0 shadow-lg h-100 rounded-4 overflow-hidden">
 
-                        <div class="card-body text-center p-4">
+                                <!-- Service Image -->
+                                <div class="service-image">
+                                    <img src="{{ asset('uploads/services/' . $service->file_upload) }}"
+                                    alt="{{ $service->service_name }}"
+                                     class="img-fluid w-100 h-100"
+                                    style="height:100px; object-fit:cover;">
+                                </div>
 
-                            <div class="service-icon">
+                                <!-- Card Body -->
+                                <div class="card-body p-4">
 
-                                <img src="{{ asset('Assest/image/2.jpeg') }}" alt="Pregnancy Care" class="img-fluid"
-                                    style="width: 100%;">
-                                <i class="bi bi-heart-pulse-fill"></i>
+                                    <h4 class="fw-bold text-dark mb-3">
+                                        {{ $service->service_name }}
+                                    </h4>
+
+                                    <p class="text-muted small">
+                                        {{ Str::limit($service->description, 120) }}
+                                    </p>
+
+                                    <hr>
+
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-semibold">💰 Price</span>
+                                        <span class="text-success fw-bold">
+                                            ₹{{ number_format($service->price) }}
+                                        </span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-semibold">⏳ Duration</span>
+                                        <span>{{ $service->duration }}</span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span class="fw-semibold">📂 Category</span>
+                                        <span class="badge bg-primary">
+                                            {{ $service->category }}
+                                        </span>
+                                    </div>
+
+
+                                </div>
+
                             </div>
-
-                            <h4 class="mt-4">Prenatal Care</h4>
-
-                            <p class="text-muted">
-                                Regular checkups, ultrasounds, nutrition guidance,
-                                and personalized pregnancy monitoring.
-                            </p>
-
-                            <a href="#" class="btn btn-outline-pink">
-                                Learn More
-                            </a>
-
                         </div>
-
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card border-0 shadow-sm h-100">
-
-                        <div class="card-body text-center p-4">
-
-                            <div class="service-icon">
-                                <img src="Assest/image/2m.jpg" alt="Delivery Care" class="img-fluid" style="width: 100%;">
-                                <i class="bi bi-hospital-fill"></i>
-
-                            </div>
-
-                            <h4 class="mt-4">Delivery Care</h4>
-
-                            <p class="text-muted">
-                                Advanced birthing suites and expert medical support
-                                for safe deliveries.
-                            </p>
-
-                            <a href="#" class="btn btn-outline-pink">
-                                Learn More
-                            </a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card border-0 shadow-sm h-100">
-
-                        <div class="card-body text-center p-4">
-
-                            <div class="service-icon">
-                                <i class="bi bi-heart"></i>
-                            </div>
-
-                            <h4 class="mt-4">Postnatal Support</h4>
-
-                            <p class="text-muted">
-                                Recovery programs, breastfeeding support,
-                                and emotional wellness care.
-                            </p>
-
-                            <a href="#" class="btn btn-outline-pink">
-                                Learn More
-                            </a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card border-0 shadow-sm h-100">
-
-                        <div class="card-body text-center p-4">
-
-                            <div class="service-icon">
-                                <i class="bi bi-bandaid-fill "></i>
-                            </div>
-
-                            <h4 class="mt-4">Pediatric Care</h4>
-
-                            <p class="text-muted">
-                                Vaccinations, routine health checks,
-                                and specialized child healthcare.
-                            </p>
-
-                            <a href="#" class="btn btn-outline-pink">
-                                Learn More
-                            </a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card border-0 shadow-sm h-100">
-
-                        <div class="card-body text-center p-4">
-
-                            <div class="service-icon">
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-
-                            <h4 class="mt-4">Reproductive Health</h4>
-
-                            <p class="text-muted">
-                                Family planning, fertility consultations,
-                                and reproductive healthcare services.
-                            </p>
-
-                            <a href="#" class="btn btn-outline-pink">
-                                Learn More
-                            </a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card border-0 shadow-sm h-100">
-
-                        <div class="card-body text-center p-4">
-
-                            <div class="service-icon">
-                                <i class="bi bi-person-hearts"></i>
-                            </div>
-
-                            <h4 class="mt-4">Women's Wellness</h4>
-
-                            <p class="text-muted">
-                                Exercise programs, pelvic floor therapy,
-                                and overall health improvement.
-                            </p>
-
-                            <a href="#" class="btn btn-outline-pink">
-                                Learn More
-                            </a>
-
-                        </div>
-
-                    </div>
+                    @endforeach
                 </div>
 
             </div>
@@ -361,22 +254,22 @@
             <div class="row text-center">
 
                 <div class="col-md-3">
-                    <h1 class="counter" data-target="15000">0</h1>
+                    <h1 class="counter" data-target="15000">15k+</h1>
                     <p>Healthy Deliveries</p>
                 </div>
 
                 <div class="col-md-3">
-                    <h1 class="counter" data-target="50">0</h1>
+                    <h1 class="counter" data-target="50">50+</h1>
                     <p>Medical Specialists</p>
                 </div>
 
                 <div class="col-md-3">
-                    <h1 class="counter" data-target="20">0</h1>
+                    <h1 class="counter" data-target="20">20+</h1>
                     <p>Years Experience</p>
                 </div>
 
                 <div class="col-md-3">
-                    <h1 class="counter" data-target="98">0</h1>
+                    <h1 class="counter" data-target="98">98%</h1>
                     <p>Patient Satisfaction</p>
                 </div>
 

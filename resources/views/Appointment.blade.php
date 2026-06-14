@@ -67,7 +67,7 @@
              <!-- Heading -->
 
              <div class="appointment-title">
-                 <span class="badge bg-danger px-3 py-2">
+                 <span class="badge bg-danger pink-color px-3 py-2">
                      Appointment Booking
                  </span>
 
@@ -156,7 +156,7 @@
                              </div>
                          @endif
 
-                         <h3 class="mb-4 text-center text-danger">
+                         <h3 class="mb-4 text-center text-danger text-pink">
                              Appointment Form
                          </h3>
 
@@ -264,7 +264,7 @@
              <div class="appointment section">
                  <div class="row">
 
-                     <div class="appointment col text-center  ">
+                     <div class="pink-color col text-center  ">
                          <h1>Book Your Appointment-Specializations</h1>
 
                      </div>

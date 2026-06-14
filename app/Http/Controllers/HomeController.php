@@ -6,6 +6,7 @@ use App\Models\Ambulance;
 use App\Models\Appointment;
 use App\Models\Doctor;
 use App\Models\Patient;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,7 +33,9 @@ class HomeController extends Controller
 
     public function getService()
     {
-        return view('service');
+        $services = Service::get();
+
+        return view('service' , compact('services'));
     }
 
     public function getviewprofile($id)
