@@ -22,7 +22,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="/admin/css/style.css">
     <!-- endinject -->
-    {{-- <link rel="shortcut icon" href="/admin/images/favicon.png" /> --}}
+    <link rel="shortcut icon" href="/admin/images/favicon.png" />
   </head>
   <body class="with-welcome-text">
     <div class="container-scroller">
@@ -37,7 +37,7 @@
           </div>
           <div>
             <a class="navbar-brand brand-logo" href="/">
-              {{-- <img src="/Assest/image/logo2.png" alt="logo" /> --}}
+              <img src="/Assest/image/logo2.png" alt="logo" />
             </a>
            
           </div>
