@@ -55,7 +55,57 @@
                          <h5>Professional Staff</h5>
                          <p>Certified paramedics and medical professionals ensure patient safety during transport.</p>
                      </div>
-                 </div>
+                 </div> <div class="row g-4 mt-4">
+
+    <!-- Emergency Alert -->
+    <div class="col-md-4">
+        <div class="feature-box text-center p-4">
+            <i class="bi bi-bell-fill fs-1 text-danger"></i>
+            <h5 class="mt-3">Emergency Alert</h5>
+            <p>
+                Send instant emergency alerts for immediate ambulance dispatch.
+            </p>
+            <button class="btn btn-danger">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                SOS Alert
+            </button>
+        </div>
+    </div>
+
+    <!-- Ambulance Status -->
+    <div class="col-md-4">
+        <div class="feature-box text-center p-4">
+            <i class="bi bi-truck fs-1 text-success"></i>
+            <h5 class="mt-3">Ambulance Status</h5>
+            <p>Current Status</p>
+
+            <span class="badge bg-success fs-6">
+                Available
+            </span>
+
+            <!-- Example -->
+            <!-- On Duty -->
+            <!-- <span class="badge bg-warning text-dark fs-6">On Duty</span> -->
+        </div>
+    </div>
+
+    <!-- Live Location -->
+    <div class="col-md-4">
+        <div class="feature-box text-center p-4">
+            <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
+            <h5 class="mt-3">Live Tracking</h5>
+            <p>
+                Track ambulance location in real time.
+            </p>
+
+            <a href="#" class="btn btn-primary">
+                <i class="bi bi-map"></i>
+                View Location
+            </a>
+        </div>
+    </div>
+
+</div>
              </div>
          </div>
      </section>
