@@ -24,7 +24,13 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            return redirect('/admin/dashboard')->with('success', 'Login Successful');
+            $user = Auth::user();
+
+            if ($user->role === 'admin') {
+                return redirect('/admin/dashboard')->with('success', 'Login Successful');
+            }
+
+            return redirect()->route('patient.dashboard')->with('success', 'Login Successful');
         }
 
         return back()->with('error', 'Invalid Email or Password');

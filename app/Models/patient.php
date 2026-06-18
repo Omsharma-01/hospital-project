@@ -1,4 +1,5 @@
 <?php
+// app/Models/Patient.php
 
 namespace App\Models;
 
@@ -9,6 +10,7 @@ class Patient extends Model
     protected $table = 'patient';
 
     protected $fillable = [
+        'user_id',
         'patient_name',
         'age',
         'gender',
@@ -18,4 +20,20 @@ class Patient extends Model
         'assigned_doctor',
         'status'
     ];
+
+    // Relationships
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class, 'assigned_doctor');
+    }
+
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class, 'patient_id');
+    }
 }

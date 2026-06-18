@@ -147,6 +147,7 @@
                 @endif
 
                 <form action="{{ route('login.post') }}" method="POST">
+                    @csrf
 
                     <input type="email" class="form-control" placeholder="Enter Email" name="email">
 
@@ -161,7 +162,7 @@
                 <div class="register-text">
 
                     Don't have an account ?
-                    <a href="#">Register</a>
+                    <a href="{{ route('register') }}">Register</a>
 
                 </div>
 

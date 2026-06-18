@@ -7,7 +7,9 @@ use App\Models\Appointment;
 use App\Models\Doctor;
 use App\Models\Patient;
 use App\Models\Service;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -17,6 +19,45 @@ class HomeController extends Controller
         // dump($doctors);
 
         return view('welcome', compact('doctors'));
+    }
+
+    public function getRegister()
+    {
+        return view('auth.register');
+    }
+
+    public function postRegister(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:8|confirmed',
+            'phone_number' => 'nullable|string|max:20',
+            'age' => 'nullable|integer',
+            'gender' => 'nullable|string|in:male,female,other',
+            'boold_group' => 'nullable|string|max:5',
+            'address' => 'nullable|string|max:500',
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'role' => 'patient',
+        ]);
+
+        Patient::create([
+            'user_id' => $user->id,
+            'patient_name' => $request->name,
+            'age' => $request->age,
+            'gender' => $request->gender,
+            'blood_group' => $request->blood_group,
+            'phone_number' => $request->phone_number,
+            'address' => $request->address,
+            'status' => 1,
+        ]);
+
+        return redirect()->route('login')->with('success', 'Registration successful. Please login.');
     }
 
     public function getabout_us()

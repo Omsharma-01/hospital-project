@@ -190,6 +190,19 @@
                 </ul>
               </div>
             </li>
+             <!-- Book Ambulance Section -->
+<li class="nav-item">
+  <a class="nav-link" data-bs-toggle="collapse" href="#ambulance" aria-expanded="false" aria-controls="ambulance">
+    <i class="menu-icon mdi mdi-layers-outline"></i>
+    <span class="menu-title">Book Ambulance</span>
+    <i class="menu-arrow"></i>
+  </a>
+  <div class="collapse" id="ambulance">
+    <ul class="nav flex-column sub-menu">
+      <li class="nav-item"> <a class="nav-link" href="/book/ambulance/list">List</a></li>
+    </ul>
+  </div>
+</li>
             
           </ul>
         </nav>
