@@ -282,7 +282,7 @@
                                 <img src="{{ asset('uploads/doctors/' . ($appointment->doctor->file_upload ?? 'default-doctor.jpg')) }}" 
                                      alt="Doctor" class="doctor-avatar">
                                 <div class="doctor-info flex-grow-1">
-                                    <h6>Dr. {{ $appointment->doctor->doctor_name ?? 'N/A' }}</h6>
+                                    <h6> {{ $appointment->doctor->doctor_name ?? 'N/A' }}</h6>
                                     <small><i class="bi bi-stethoscope me-1"></i>{{ $appointment->doctor->specialization ?? 'General' }}</small>
                                     <div class="mt-1">
                                         <span class="appointment-status {{ $statusClass[$appointment->status] ?? 'status-pending' }}">
