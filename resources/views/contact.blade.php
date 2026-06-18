@@ -176,7 +176,7 @@
 
                              <div class="info-box">
                                  <div class="info-icon">
-                                     <i class="fas fa-location-dot"></i>
+                                     <i class="fas fa-map-marker-alt"></i>
                                  </div>
                                  <div class="info-content">
                                      <h6>Address</h6>

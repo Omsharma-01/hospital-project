@@ -103,6 +103,7 @@ Route::get('/viewprofile/{id}', [HomeController::class, 'getviewprofile']);
 Route::get('/contact', [HomeController::class, 'getcontact']);
 Route::get('/appointment', [HomeController::class, 'getAppointment']);
 Route::get('/ambulance', [HomeController::class, 'getambulance']);
+Route::get('/hospital', [HomeController::class, 'gethospital']);
 
 Route::post('/appointment/store', [HomeController::class, 'appointment_store'])
     ->name('appointment.store1');

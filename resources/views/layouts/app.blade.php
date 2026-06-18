@@ -19,6 +19,79 @@
 
 <body>
 
+    <style>
+        .social {
+            margin-top: 30px;
+        }
+
+        .social a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #f64d86;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: .3s;
+        }
+
+        .social a:hover {
+            background: #ffffff;
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #3a3a3a;
+            font-size: 15px;
+        }
+
+        .footer-contact .contact-item i {
+            width: 38px;
+            height: 38px;
+            background: rgba(246, 77, 134, 0.15);
+            color: #f64d86;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .footer-contact .contact-item:hover i {
+            background: #f64d86;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .footer-contact a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-item a {
+            color: #3a3a3a;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: #f64d86;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+    </style>
     <!-- Top Header -->
     <div class="topbar py-2">
         <div class="container">
@@ -62,10 +135,10 @@
                         @endif
 
 
-                        <a href="/appointment" class="btn btn-light btn-sm px-4 rounded-pill fw-semibold">
+                        {{-- <a href="/appointment" class="btn btn-light btn-sm px-4 rounded-pill fw-semibold">
                             <i class="bi bi-calendar-check-fill"></i>
                             Book Appointment
-                        </a>
+                        </a> --}}
 
                     </div>
 
@@ -94,57 +167,58 @@
             <div class="collapse navbar-collapse" id="navbarContent">
 
                 <ul class="navbar-nav ms-auto align-items-lg-center">
-
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">
+                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">
                             Home
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/about-us">
+                        <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}" href="/about-us">
                             About Us
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/service">
+                        <a class="nav-link {{ request()->is('service') ? 'active' : '' }}" href="/service">
                             Services
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/doctor">
+                        <a class="nav-link {{ request()->is('doctor') ? 'active' : '' }}" href="/doctor">
                             Doctors
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/appointment">
+                        <a class="nav-link {{ request()->is('appointment') ? 'active' : '' }}" href="/appointment">
                             Appointment
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/pregnancy-guide">
+                        <a class="nav-link {{ request()->is('pregnancy-guide') ? 'active' : '' }}"
+                            href="/pregnancy-guide">
                             Pregnancy Guide
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">
+                        <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="/contact">
                             Contact
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="/ambulance">
+                        <a class="nav-link {{ request()->is('ambulance') ? 'active' : '' }}" href="/ambulance">
                             Ambulance
                         </a>
                     </li>
 
-                    <li class="nav-item ms-lg-3">
-                        <a href="/appointment" class="btn appointment-btn rounded-pill px-4">
-                            Book Now
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('hospital') ? 'active' : '' }}" href="/hospital">
+                            Hospital
                         </a>
                     </li>
 
@@ -234,30 +308,48 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-semibold mb-3">Contact Us</h5>
 
-                    <p class="mb-2">
-                        📍 Mother Care Hospital
-                    </p>
+                    <div class="footer-contact">
 
-                    <p class="mb-2">
-                        📞 +91 9876543210
-                    </p>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mother Care Hospital, Patna, Bihar</span>
+                        </div>
 
-                    <p class="mb-2">
-                        ✉ info@mothercarehospital.com
-                    </p>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </div>
 
-                    <div class="mt-3">
-                        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle me-2">
-                            <i class="bi bi-facebook"></i>
-                        </a>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@mothercarehospital.com">
+                                info@mothercarehospital.com
+                            </a>
+                        </div>
 
-                        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle me-2">
-                            <i class="bi bi-instagram"></i>
-                        </a>
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-clock"></i>
+                            <span>24×7 Emergency Care Available</span>
+                        </div>
 
-                        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle">
-                            <i class="bi bi-youtube"></i>
-                        </a>
+                        <div class="social">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 

@@ -494,7 +494,7 @@
 
                          <div class="info-item">
                              <strong>Contact Number</strong>
-                             <p class="mb-0">+91 9876543210</p>
+                             <p class="mb-0">+91 8409573224</p>
                          </div>
 
                          <div class="info-item">
@@ -542,7 +542,7 @@
 
                          <div class="info-item">
                              <strong>Contact Number</strong>
-                             <p class="mb-0">+91 9123456789</p>
+                             <p class="mb-0">+91 8409573224</p>
                          </div>
 
                          <div class="info-item">
@@ -568,63 +568,63 @@
                          </div>
 
                      </div>
-<<<<<<< HEAD
-                 </div> <div class="row g-4 mt-4">
+                 </div>
+                 <div class="row g-4 mt-4">
 
-    <!-- Emergency Alert -->
-    <div class="col-md-4">
-        <div class="feature-box text-center p-4">
-            <i class="bi bi-bell-fill fs-1 text-danger"></i>
-            <h5 class="mt-3">Emergency Alert</h5>
-            <p>
-                Send instant emergency alerts for immediate ambulance dispatch.
-            </p>
-            <button class="btn btn-danger">
-                <i class="bi bi-exclamation-triangle-fill"></i>
-                SOS Alert
-            </button>
-        </div>
-    </div>
+                     <!-- Emergency Alert -->
+                     <div class="col-md-4">
+                         <div class="feature-box text-center p-4">
+                             <i class="bi bi-bell-fill fs-1 text-danger"></i>
+                             <h5 class="mt-3">Emergency Alert</h5>
+                             <p>
+                                 Send instant emergency alerts for immediate ambulance dispatch.
+                             </p>
+                             <button class="btn btn-danger">
+                                 <i class="bi bi-exclamation-triangle-fill"></i>
+                                 SOS Alert
+                             </button>
+                         </div>
+                     </div>
 
-    <!-- Ambulance Status -->
-    <div class="col-md-4">
-        <div class="feature-box text-center p-4">
-            <i class="bi bi-truck fs-1 text-success"></i>
-            <h5 class="mt-3">Ambulance Status</h5>
-            <p>Current Status</p>
+                     <!-- Ambulance Status -->
+                     <div class="col-md-4">
+                         <div class="feature-box text-center p-4">
+                             <i class="bi bi-truck fs-1 text-success"></i>
+                             <h5 class="mt-3">Ambulance Status</h5>
+                             <p>Current Status</p>
 
-            <span class="badge bg-success fs-6">
-                Available
-            </span>
+                             <span class="badge bg-success fs-6">
+                                 Available
+                             </span>
 
-            <!-- Example -->
-            <!-- On Duty -->
-            <!-- <span class="badge bg-warning text-dark fs-6">On Duty</span> -->
-        </div>
-    </div>
+                             <!-- Example -->
+                             <!-- On Duty -->
+                             <!-- <span class="badge bg-warning text-dark fs-6">On Duty</span> -->
+                         </div>
+                     </div>
 
-    <!-- Live Location -->
-    <div class="col-md-4">
-        <div class="feature-box text-center p-4">
-            <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
-            <h5 class="mt-3">Live Tracking</h5>
-            <p>
-                Track ambulance location in real time.
-            </p>
+                     <!-- Live Location -->
+                     <div class="col-md-4">
+                         <div class="feature-box text-center p-4">
+                             <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
+                             <h5 class="mt-3">Live Tracking</h5>
+                             <p>
+                                 Track ambulance location in real time.
+                             </p>
 
-            <a href="#" class="btn btn-primary">
-                <i class="bi bi-map"></i>
-                View Location
-            </a>
-        </div>
-    </div>
+                             <a href="#" class="btn btn-primary">
+                                 <i class="bi bi-map"></i>
+                                 View Location
+                             </a>
+                         </div>
+                     </div>
 
-</div>
-=======
                  </div>
 
->>>>>>> 887ee143f272cab1c097afc83a342888f5f4558d
              </div>
+
+
+         </div>
 
 
 
@@ -633,23 +633,26 @@
 
      <!-- Map -->
 
-     <div class="map-card mt-5">
+     <div class="container mt-5">
+         <div class="map-card mt-5">
 
-         <div class="map-header">
-             <h4 class="mb-0">
-                 <i class="bi bi-geo-alt-fill"></i>
-                 Live GPS Tracking
-             </h4>
+             <div class="map-header">
+                 <h4 class="mb-0">
+                     <i class="bi bi-geo-alt-fill"></i>
+                     Live GPS Tracking
+                 </h4>
+             </div>
+
+             <iframe src="https://maps.google.com/maps?q=Ranchi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                 height="450" style="border:0;">
+             </iframe>
+
          </div>
+     </div>
 
-         <iframe src="https://maps.google.com/maps?q=Ranchi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
-             height="450" style="border:0;">
-         </iframe>
 
      </div>
 
-     </div>
-     ```
 
      </section>
 

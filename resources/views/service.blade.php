@@ -2,7 +2,7 @@
 @section('content')
     <style>
         :root {
-            --primary: #d63384;
+            --primary: #f64d86;
         }
 
         .service-card:hover {
@@ -126,9 +126,8 @@
                                 <!-- Service Image -->
                                 <div class="service-image">
                                     <img src="{{ asset('uploads/services/' . $service->file_upload) }}"
-                                    alt="{{ $service->service_name }}"
-                                     class="img-fluid w-100 h-100"
-                                    style="height:100px; object-fit:cover;">
+                                        alt="{{ $service->service_name }}" class="img-fluid w-100 h-100"
+                                        style="height:100px; object-fit:cover;">
                                 </div>
 
                                 <!-- Card Body -->
