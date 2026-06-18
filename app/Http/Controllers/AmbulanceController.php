@@ -78,17 +78,15 @@ class AmbulanceController extends Controller
     {
         $ambulance = Ambulance::findorfail($id);
 
-        $filename = $doctor->file_upload;
+        $filename = $ambulance->file_upload;
 
-        
         if ($request->hasFile('file_upload')) {
             $file = $request->file('file_upload');
             $filename = time().'.'.$file->getClientOriginalExtension();
-            $file->move(public_path('uploads/doctors'), $filename);
+            $file->move(public_path('uploads/ambulance'), $filename);
         }
 
-
-          $Ambulance->update([
+        $ambulance->update([
             'ambulance_name' => $request->ambulance_name,
             'ambulance_no' => $request->ambulance_no,
             'driver_name' => $request->driver_name,

@@ -100,12 +100,12 @@ class AppointmentController extends Controller
      */
     public function destroy(string $id)
     {
-        $ambulance = Appointment::findorfail($id);
+        $appointment = Appointment::findorfail($id);
 
-        //Record delete
+        // Record delete
         $appointment->delete();
 
         return redirect('admin/appointment/list')
-                ->with('success','Appointment updated successfully');
+                ->with('success','Appointment deleted successfully');
     }
 }

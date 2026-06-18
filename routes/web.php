@@ -29,11 +29,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/patient/{name}/{id}', [PatientController::class, 'getpatientName']);
 
     Route::middleware(['role:admin'])->group(function () {
-        Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
-        Route::get('/admin/hospital/list', [HospitalController::class, 'index']);
-        Route::get('/admin/hospital/create', [HospitalController::class, 'create']);
-        Route::get('/admin/hospital/edit/{id}', [HospitalController::class, 'edit']);
-        Route::get('/admin/hospital/view/{id}', [HospitalController::class, 'show']);
+        Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+        Route::get('/admin/hospital/list', [HospitalController::class, 'index'])->name('hospital.index');
+        Route::get('/admin/hospital/create', [HospitalController::class, 'create'])->name('hospital.create');
+        Route::get('/admin/hospital/edit/{id}', [HospitalController::class, 'edit'])->name('hospital.edit');
+        Route::get('/admin/hospital/view/{id}', [HospitalController::class, 'show'])->name('hospital.show');
         Route::post('/admin/hospital/store', [HospitalController::class, 'store'])
             ->name('hospital.store');
         Route::post('/admin/hospital/update/{id}', [HospitalController::class, 'update'])
@@ -41,10 +42,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/admin/hospital/delete/{id}', [HospitalController::class, 'destroy'])
             ->name('hospital.delete');
 
-        Route::get('/admin/ambulance/list', [AmbulanceController::class, 'index']);
-        Route::get('/admin/ambulance/create', [AmbulanceController::class, 'create']);
-        Route::get('/admin/ambulance/edit/{id}', [AmbulanceController::class, 'edit']);
-        Route::get('/admin/ambulance/view/{id}', [AmbulanceController::class, 'show']);
+        Route::get('/admin/ambulance/list', [AmbulanceController::class, 'index'])->name('ambulance.index');
+        Route::get('/admin/ambulance/create', [AmbulanceController::class, 'create'])->name('ambulance.create');
+        Route::get('/admin/ambulance/edit/{id}', [AmbulanceController::class, 'edit'])->name('ambulance.edit');
+        Route::get('/admin/ambulance/view/{id}', [AmbulanceController::class, 'show'])->name('ambulance.show');
         Route::post('/admin/ambulance/store', [AmbulanceController::class, 'store'])
             ->name('ambulance.store');
         Route::post('/admin/ambulance/update/{id}', [AmbulanceController::class, 'update'])
@@ -52,10 +53,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/admin/ambulance/delete/{id}', [AmbulanceController::class, 'destroy'])
             ->name('ambulance.delete');
 
-        Route::get('/admin/doctor/list', [DoctorController::class, 'index']);
-        Route::get('/admin/doctor/create', [DoctorController::class, 'create']);
-        Route::get('/admin/doctor/edit/{id}', [DoctorController::class, 'edit']);
-        Route::get('/admin/doctor/view/{id}', [DoctorController::class, 'show']);
+        Route::get('/admin/doctor/list', [DoctorController::class, 'index'])->name('doctor.index');
+        Route::get('/admin/doctor/create', [DoctorController::class, 'create'])->name('doctor.create');
+        Route::get('/admin/doctor/edit/{id}', [DoctorController::class, 'edit'])->name('doctor.edit');
+        Route::get('/admin/doctor/view/{id}', [DoctorController::class, 'show'])->name('doctor.show');
         Route::post('/admin/doctor/store', [DoctorController::class, 'store'])
             ->name('doctor.store');
         Route::post('/admin/doctor/update/{id}', [DoctorController::class, 'update'])
@@ -63,10 +64,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/admin/doctor/delete/{id}', [DoctorController::class, 'destroy'])
             ->name('doctor.delete');
 
-        Route::get('/admin/patient/list', [PatientController::class, 'index']);
-        Route::get('/admin/patient/create', [PatientController::class, 'create']);
-        Route::get('/admin/patient/edit/{id}', [PatientController::class, 'edit']);
-        Route::get('/admin/patient/view/{id}', [PatientController::class, 'show']);
+        Route::get('/admin/patient/list', [PatientController::class, 'index'])->name('patient.index');
+        Route::get('/admin/patient/create', [PatientController::class, 'create'])->name('patient.create');
+        Route::get('/admin/patient/edit/{id}', [PatientController::class, 'edit'])->name('patient.edit');
+        Route::get('/admin/patient/view/{id}', [PatientController::class, 'show'])->name('patient.show');
         Route::post('/admin/patient/store', [PatientController::class, 'store'])
             ->name('patient.store');
         Route::post('/admin/patient/update/{id}', [PatientController::class, 'update'])
@@ -74,10 +75,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/admin/patient/delete/{id}', [PatientController::class, 'destroy'])
             ->name('patient.delete');
 
-        Route::get('/admin/service/list', [ServiceController::class, 'index']);
-        Route::get('/admin/service/create', [ServiceController::class, 'create']);
-        Route::get('/admin/service/edit/{id}', [ServiceController::class, 'edit']);
-        Route::get('/admin/service/view/{id}', [ServiceController::class, 'show']);
+        Route::get('/admin/service/list', [ServiceController::class, 'index'])->name('service.index');
+        Route::get('/admin/service/create', [ServiceController::class, 'create'])->name('service.create');
+        Route::get('/admin/service/edit/{id}', [ServiceController::class, 'edit'])->name('service.edit');
+        Route::get('/admin/service/view/{id}', [ServiceController::class, 'show'])->name('service.show');
         Route::post('/admin/service/store', [ServiceController::class, 'store'])
             ->name('service.store');
         Route::post('/admin/service/update/{id}', [ServiceController::class, 'update'])
@@ -85,16 +86,27 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/admin/service/delete/{id}', [ServiceController::class, 'destroy'])
             ->name('service.delete');
 
-        Route::get('/admin/appointment/list', [AppointmentController::class, 'index']);
-        Route::get('/admin/appointment/create', [AppointmentController::class, 'create']);
-        Route::get('/admin/appointment/edit/{id}', [AppointmentController::class, 'edit']);
-        Route::get('/admin/appointment/view/{id}', [AppointmentController::class, 'show']);
+        Route::get('/admin/appointment/list', [AppointmentController::class, 'index'])->name('appointment.index');
+        Route::get('/admin/appointment/create', [AppointmentController::class, 'create'])->name('appointment.create');
+        Route::get('/admin/appointment/edit/{id}', [AppointmentController::class, 'edit'])->name('appointment.edit');
+        Route::get('/admin/appointment/view/{id}', [AppointmentController::class, 'show'])->name('appointment.show');
         Route::post('/admin/appointment/store', [AppointmentController::class, 'store'])
             ->name('appointment.store');
         Route::post('/admin/appointment/update/{id}', [AppointmentController::class, 'update'])
             ->name('appointment.update');
         Route::delete('/admin/appointment/delete/{id}', [AppointmentController::class, 'destroy'])
             ->name('appointment.delete');
+
+        Route::get('/admin/bookambulance/list', [BookAmbulanceController::class, 'index'])->name('bookambulance.index');
+        Route::get('/admin/bookambulance/create', [BookAmbulanceController::class, 'create'])->name('bookambulance.create');
+        Route::get('/admin/bookambulance/edit/{id}', [BookAmbulanceController::class, 'edit'])->name('bookambulance.edit');
+        Route::get('/admin/bookambulance/view/{id}', [BookAmbulanceController::class, 'show'])->name('bookambulance.show');
+        Route::post('/admin/bookambulance/store', [BookAmbulanceController::class, 'store'])
+            ->name('bookambulance.store');
+        Route::post('/admin/bookambulance/update/{id}', [BookAmbulanceController::class, 'update'])
+            ->name('bookambulance.update');
+        Route::delete('/admin/bookambulance/delete/{id}', [BookAmbulanceController::class, 'destroy'])
+            ->name('bookambulance.delete');
     });
 
     Route::get('/book/ambulance/list', [BookAmbulanceController::class, 'index'])->name('bookambulance.list');

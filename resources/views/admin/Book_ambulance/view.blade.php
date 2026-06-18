@@ -48,10 +48,15 @@
                     </tr>
                 </table>
 
-                <a href="{{ route('bookambulance.list') }}"
-                    class="btn btn-secondary">
-                    Back
-                </a>
+                <div class="mt-3">
+                    <a href="{{ route('bookambulance.edit', $ambulance->id) }}" class="btn btn-warning btn-sm">
+                        Edit
+                    </a>
+                    <a href="{{ route('bookambulance.index') }}"
+                        class="btn btn-secondary btn-sm">
+                        Back
+                    </a>
+                </div>
 
             </div>
         </div>

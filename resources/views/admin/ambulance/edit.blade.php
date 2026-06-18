@@ -8,7 +8,7 @@
                          <div class="card-body">
                              <h4 class="card-title">Edit Ambulance</h4>
                              <p class="card-description"> edit </p>
-                             <form action="{{ route('ambulance.store', $data->id) }}" method="POST" class="forms-sample">
+                             <form action="{{ route('ambulance.update', $data->id) }}" method="POST" class="forms-sample">
 
                                  @csrf
                                  {{-- /secure key --}}

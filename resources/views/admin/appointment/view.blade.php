@@ -57,7 +57,7 @@
                     Edit
                 </a>
 
-                <a href="{{ route('appointment.view') }}"
+                <a href="/admin/appointment/list"
                     class="btn btn-secondary">
                     Back
                 </a> --}}

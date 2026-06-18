@@ -2,25 +2,34 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambulance;
+use App\Models\Appointment;
+use App\Models\Doctor;
+use App\Models\Patient;
+use App\Models\Service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    function dashboard(){
-        return view('admin.dashboard');
-    }
-    public function list(){
-        return view(admin.layout.hospitallist);
-    }
+    public function dashboard()
+    {
+        $totalPatients = Patient::count();
+        $totalAmbulances = Ambulance::count();
+        $totalServices = Service::count();
+        $totalDoctors = Doctor::count();
+        $upcomingAppointments = Appointment::whereDate('appointment_date', '>=', Carbon::today())
+            ->whereIn('status', [Appointment::STATUS_PENDING, Appointment::STATUS_CONFIRMED])
+            ->count();
+        $doctors = Doctor::latest()->take(6)->get();
 
-       public function create(){
-        return view(admin.layout.hospitalcreate);
+        return view('admin.dashboard', compact(
+            'totalPatients',
+            'totalAmbulances',
+            'totalServices',
+            'totalDoctors',
+            'upcomingAppointments',
+            'doctors'
+        ));
     }
-
-    
-       public function patient(){
-        return view(admin.patient.hospitalpatient);
-    }
-    
-    
 }

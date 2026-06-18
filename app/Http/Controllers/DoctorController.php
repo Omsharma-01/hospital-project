@@ -61,10 +61,9 @@ class DoctorController extends Controller
      */
     public function show(string $id)
     {
-
         $doctor = Doctor::findorfail($id);
 
-        return view('admin.Doctor.view', compact('doctor'));
+        return view('admin.doctor.view', compact('doctor'));
     }
 
     /**
