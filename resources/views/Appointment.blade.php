@@ -2,7 +2,7 @@
  @section('content')
      <style>
          :root {
-             --primary: #d63384;
+             --primary: #f64d86;
          }
 
          .appointment-section {
@@ -259,23 +259,7 @@
      </section>
 
 
-     <section>
-         <div class="container-fluid">
-             <div class="appointment section">
-                 <div class="row">
 
-                     <div class="pink-color col text-center  ">
-                         <h1>Book Your Appointment-Specializations</h1>
-
-                     </div>
-
-                 </div>
-
-                 <h4>
-             </div>
-         </div>
-
-     </section>
 
      {{-- <section>
          <div class="container">

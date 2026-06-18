@@ -14,6 +14,6 @@ class Hospital extends Model
         'city',
         'pin_code',
         'email',
-        'status'
+        'status',
     ];
 }

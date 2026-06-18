@@ -1,6 +1,107 @@
  @extends('layouts.app')
  @section('content')
      <style>
+         :root {
+             --primary: #f64d86;
+         }
+
+         .doctor-section {
+             padding: 80px 0;
+             background: #fff7fa;
+         }
+
+         .doctor-card {
+             background: #fff;
+             border-radius: 20px;
+             overflow: hidden;
+             box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+             transition: .4s;
+             margin-bottom: 30px;
+             height: 100%;
+             border: none;
+         }
+
+         .doctor-card:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 20px 40px rgba(246, 77, 134, .20);
+         }
+
+         .doctor-img {
+             position: relative;
+             overflow: hidden;
+         }
+
+         .doctor-img img {
+             width: 100%;
+             height: 280px;
+             object-fit: cover;
+             transition: .5s;
+         }
+
+         .doctor-card:hover .doctor-img img {
+             transform: scale(1.08);
+         }
+
+         .exp-badge {
+             position: absolute;
+             top: 15px;
+             right: 15px;
+             background: #f64d86;
+             color: #fff;
+             padding: 8px 15px;
+             border-radius: 30px;
+             font-size: 12px;
+             font-weight: 700;
+         }
+
+         .doctor-content {
+             padding: 25px;
+         }
+
+         .doctor-name {
+             font-size: 22px;
+             font-weight: 700;
+             margin-bottom: 5px;
+         }
+
+         .specialization {
+             color: #f64d86;
+             font-weight: 600;
+             margin-bottom: 10px;
+         }
+
+         .about-text {
+             color: #666;
+             font-size: 14px;
+             line-height: 1.7;
+             min-height: 70px;
+         }
+
+         .btn-profile {
+             border: 2px solid #f64d86;
+             color: #f64d86;
+             border-radius: 50px;
+             font-weight: 600;
+         }
+
+         .btn-profile:hover {
+             background: #f64d86;
+             color: #fff;
+         }
+
+         .btn-book {
+             background: #f64d86;
+             color: #fff;
+             border-radius: 50px;
+             font-weight: 600;
+         }
+
+         .btn-book:hover {
+             background: #e43c75;
+             color: #fff;
+         }
+     </style>
+     <style>
          .hero-section {
              background: linear-gradient(135deg,
                      #fff5f8,
@@ -476,17 +577,35 @@
                  </div>
                  <div class="col-lg-6">
                      <!-- Right Image -->
-                     <div class="hero-image-box ms-auto">
 
-                         <img src="Assest/image/mother6.png" class="img-fluid hero-image" alt="Mother Care Hospital">
+                     <div>
+                         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                             <div class="carousel-inner">
+                                 <div class="carousel-item active">
+                                     <img src="Assest/image/mother6.png" class="d-block img-fluid hero-image"
+                                         alt="Mother Care Hospital">
 
-                         {{-- <div class="info-card">
-                             <i class="bi bi-heart-pulse-fill"></i>
-                             <div>
-                                 <h5>10K+</h5>
-                                 <span>Healthy Deliveries</span>
+                                 </div>
+                                 <div class="carousel-item">
+                                     <img src="Assest/image/mother7.png" class="d-block img-fluid hero-image"
+                                         alt="Mother Care Hospital">
+                                 </div>
+                                 <div class="carousel-item">
+                                     <img src="Assest/image/mother2.png" class="d-block img-fluid hero-image"
+                                         alt="Mother Care Hospital">
+                                 </div>
                              </div>
-                         </div> --}}
+                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                 data-bs-slide="prev">
+                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Previous</span>
+                             </button>
+                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                 data-bs-slide="next">
+                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Next</span>
+                             </button>
+                         </div>
                      </div>
                  </div>
              </div>
@@ -1532,6 +1651,89 @@
 
      </section>
 
+
+
+     <!--Doctors-->
+
+
+
+
+     <section class="doctor-section">
+
+
+         <div class="container">
+
+             <div class="text-center mb-5">
+                 <h2 class="fw-bold">Our Specialist Doctors</h2>
+                 <p class="text-muted">
+                     Meet our experienced maternity and healthcare specialists
+                 </p>
+             </div>
+
+             <div class="row">
+
+                 @foreach ($doctors as $row)
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+
+                         <div class="doctor-card">
+
+                             <div class="doctor-img">
+
+                                 <img src="{{ asset('uploads/doctors/' . $row->file_upload) }}"
+                                     alt="{{ $row->doctor_name }}">
+
+                                 <span class="exp-badge">
+                                     {{ $row->experience }}+ Years
+                                 </span>
+
+                             </div>
+
+                             <div class="doctor-content">
+
+                                 <h5 class="doctor-name">
+                                     {{ $row->doctor_name }}
+                                 </h5>
+
+                                 <div class="specialization">
+                                     {{ $row->specialization }}
+                                 </div>
+
+                                 <p class="about-text">
+                                     {{ Str::limit($row->about_us, 90) }}
+                                 </p>
+
+                                 <div class="d-grid gap-2">
+
+                                     <a href="/viewprofile/{{ $row->id }}" class="btn btn-profile">
+
+                                         <i class="bi bi-person-circle"></i>
+                                         View Profile
+
+                                     </a>
+
+                                     <a href="/appointment/{{ $row->id }}" class="btn btn-book">
+
+                                         <i class="bi bi-calendar-check"></i>
+                                         Book Appointment
+
+                                     </a>
+
+                                 </div>
+
+                             </div>
+
+                         </div>
+
+                     </div>
+                 @endforeach
+
+             </div>
+
+         </div>
+
+
+     </section>
+
      <!--contact-us-->
 
 
@@ -1559,7 +1761,7 @@
 
                              <div class="info-box">
                                  <div class="info-icon">
-                                     <i class="fas fa-location-dot"></i>
+                                     <i class="fas fa-map-marker-alt"></i>
                                  </div>
                                  <div class="info-content">
                                      <h6>Address</h6>
@@ -1669,143 +1871,5 @@
              </div>
 
          </div>
-     </section>
-
-     <!--Doctors-->
-
-     <section>
-         <div class="container-fluid">
-             <div class="doctor section ms-5 me-5 mt-3 mb-3">
-                 <div class="row">
-
-                     <div class="col text-center">
-                         <h4>Our Expert Doctors</h4>
-                         <h1>Meet Our Compassionate Medical Team</h1>
-                         <h3>Doctors Directory</h3>
-
-                     </div>
-
-                 </div>
-
-                 <h4>
-             </div>
-         </div>
-
-     </section>
-
-     <section>
-         <div class="container">
-             <div class="row">
-
-                 @foreach ($doctors as $row)
-                     <div class=" doctors-card col-sm-6 col-md-3 col-lg-3">
-                         <img src="{{ asset('uploads/doctors/' . $row->file_upload) }}" class="card-img-top "
-                             height="130px" alt="...">
-                         <div class="card-body">
-                             <h5 class="card-title">{{ $row->doctor_name }}</h5>
-                             <h6>{{ $row->specialization }}</h6>
-                             <h6>{{ $row->experience }} of experience</h6>
-                             <p class="card-text"> {{ $row->about_us }}
-                             </p>
-                             <a href="/viewprofile/{{ $row->id }}" class="btn btn-outline-primary btn-sm"> View
-                                 profile </a>
-                             <button type="button" class="btn btn-primary btn-sm "> <i class="bi bi-calendar3"></i> Book
-                                 Appointment</button>
-                         </div>
-                     </div>
-                 @endforeach
-
-
-             </div>
-         </div>
-     </section>
-
-     <section>
-         <div class="container-fluid">
-             <div class="doctor section ms-5 me-5 mt-3 mb-3">
-                 <div class="row">
-
-                     <div class="col-8 text-start">
-                         <h6> Find a specilist to find nameh doctor at your more specilist</h6>
-
-                     </div>
-                     <div class="col-4 text-start" width:50px>
-                         <input placeholder="search" class="search-input">
-                         <div class="search-icon">
-                             <i class="bi bi-search"></i>
-                         </div>
-                     </div>
-
-                 </div>
-
-                 <h4>
-             </div>
-         </div>
-
-     </section>
-
-     <!--Appointment section-->
-
-     <section>
-         <div class="container-fluid">
-             <div class="appointment section">
-                 <div class="row">
-
-                     <div class="appointment col text-center  ">
-                         <h1>Book Your Appointment-Specializations</h1>
-
-                     </div>
-
-                 </div>
-
-                 <h4>
-             </div>
-         </div>
-
-     </section>
-
-     <section>
-         <div class="container">
-
-             <div class="row">
-                 <div class="col-4 ">
-                     <div class="card">
-                         <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
-                             <h5 class="card-title">Book appointment</h5>
-                             <p class="card-text">Schedule an appointment<br>
-                                 with our experienced<br>
-                                 doctord.</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-4 ">
-                     <div class="card">
-                         <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
-                             <h5 class="card-title">Book appointment</h5>
-                             <p class="card-text">Schedule an appointment<br>
-                                 with our experienced<br>
-                                 doctord.</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-4 ">
-                     <div class="card">
-                         <div class="card-body"><i class="bi bi-calendar3 text-center"></i>
-                             <h5 class="card-title">Book appointment</h5>
-                             <p class="card-text">Schedule an appointment<br>
-                                 with our experienced<br>
-                                 doctord.</p>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-
-
-
-
-
-         </div>
-
      </section>
  @endsection
