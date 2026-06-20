@@ -71,7 +71,7 @@ class DashboardController extends Controller
             ->map(function($item) {
                 return [
                     'type' => 'appointment',
-                    'title' => 'Appointment with Dr. ' . ($item->doctor->doctor_name ?? 'Doctor'),
+                    'title' => 'Appointment with ' . ($item->doctor->doctor_name ?? 'Doctor'),
                     'time' => $item->created_at->diffForHumans(),
                     'icon' => 'bi-calendar-check',
                     'bg' => 'pink-bg'
