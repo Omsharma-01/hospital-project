@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="{{ asset('Assest/style/style.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
 </head>
 
 <body>
@@ -91,6 +94,77 @@
             display: flex;
             gap: 12px;
         }
+
+        .user-panel {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .user-info i {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .dashboard-btn {
+            background: #f64d86;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .dashboard-btn:hover {
+            background: #ff6b9c;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .logout-btn {
+            background: #fff;
+            color: #f64d86;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .logout-btn:hover {
+            background: #f64d86;
+            color: #fff;
+        }
+
+        .login-btn {
+            background: #f64d86;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: .3s;
+        }
+
+        .login-btn:hover {
+            background: #ff6b9c;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(246, 77, 134, .35);
+        }
     </style>
     <!-- Top Header -->
     <div class="topbar py-2">
@@ -109,7 +183,7 @@
 
                         <span>
                             <i class="bi bi-telephone-fill me-1"></i>
-                            +91 98765 43210
+                            +91 8409573224
                         </span>
 
                         <span>
@@ -126,8 +200,9 @@
                     <div class="d-flex justify-content-lg-end align-items-center gap-3 mt-2 mt-lg-0">
 
 
-                        @if (Auth::check())
+                        {{-- @if (Auth::check())
                             <a href="{{ url('logout') }}" class="text-white text-decoration-none">Logout</a>
+                            <h6 class="text-white mb-0">{{ Auth::user()->name }}</h6>
                             <i class="bi bi-person-circle"></i>
                         @else
                             <a href="{{ url('login') }}" class="text-white text-decoration-none">Login</a>
@@ -139,7 +214,31 @@
                             <i class="bi bi-calendar-check-fill"></i>
                             Book Appointment
                         </a> --}}
+                        @if (Auth::check())
+                            <div class="user-panel">
 
+                                <div class="user-info">
+                                    <i class="bi bi-person-circle"></i>
+                                    <span>{{ Auth::user()->name }}</span>
+                                </div>
+
+                                <a href="/dashboard" class="dashboard-btn">
+                                    <i class="bi bi-speedometer2"></i>
+                                    Dashboard
+                                </a>
+
+                                <a href="{{ url('logout') }}" class="logout-btn">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    Logout
+                                </a>
+
+                            </div>
+                        @else
+                            <a href="{{ url('login') }}" class="login-btn">
+                                <i class="bi bi-person-fill"></i>
+                                Login
+                            </a>
+                        @endif
                     </div>
 
                 </div>
@@ -148,6 +247,7 @@
 
         </div>
     </div>
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
@@ -380,6 +480,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

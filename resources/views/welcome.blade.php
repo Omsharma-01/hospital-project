@@ -531,8 +531,8 @@
 
 
                  <!-- Left Content -->
-                 <div class="col-lg-6">
-                     <span class="badge bg-light text-danger px-3 py-2 mb-3">
+                 <div class="col-lg-6" data-aos="fade-right">
+                     <span class="badge bg-light text-danger px-3 py-2 mb-3" data-aos="flip-right">
                          ❤️ Trusted Pregnancy Care Center
                      </span>
 
@@ -575,7 +575,7 @@
                          </div>
                      </div>
                  </div>
-                 <div class="col-lg-6">
+                 <div class="col-lg-6" data-aos="fade-left">
                      <!-- Right Image -->
 
                      <div>
