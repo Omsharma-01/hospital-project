@@ -30,6 +30,6 @@ class Doctor extends Model
     // Accessor for full name with title
     public function getFullNameAttribute()
     {
-        return ' ' . $this->doctor_name;
+        return $this->doctor_name;
     }
 }

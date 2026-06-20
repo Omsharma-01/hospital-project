@@ -123,6 +123,11 @@ class HomeController extends Controller
 
     public function appointment_store(Request $request)
     {
+
+     if (!auth()->check()) {
+        return redirect()->route('login')
+            ->with('error', 'Please login first to book an appointment.');
+    }
         $patient = Patient::create([
             'patient_name' => $request->patient_name,
             'age' => $request->age,
@@ -132,6 +137,7 @@ class HomeController extends Controller
             'address' => $request->address,
             'assigned_doctor' => $request->doctor_id,
             'status' => 1,
+            'user_id' => auth()->id(),
         ]);
 
         Appointment::create([

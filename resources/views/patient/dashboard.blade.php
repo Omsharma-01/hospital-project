@@ -508,11 +508,29 @@
                                     @endphp
                                     <span class="appointment-status {{ $statusClassText }}">{{ $statusText }}</span>
                                 </div>
+<<<<<<< HEAD
                             @empty
                                 <p class="text-muted text-center py-3">No appointments yet. <a
                                         href="{{ route('patient.appointments') }}">Book one now!</a></p>
                             @endforelse
                         </div>
+=======
+                                <div class="appointment-info">
+                                    <h6> {{ $appointment->doctor->doctor_name ?? 'N/A' }}</h6>
+                                    <small><i class="bi bi-clock me-1"></i>{{ $appointment->appointment_time }} - {{ $appointment->doctor->specialization ?? 'General' }}</small>
+                                </div>
+                                @php
+                                    $statusMap = [0 => 'Pending', 1 => 'Confirmed', 2 => 'Completed', 3 => 'Cancelled'];
+                                    $statusClass = ['status-pending', 'status-confirmed', 'status-completed', 'status-cancelled'];
+                                    $statusText = $statusMap[$appointment->status] ?? 'Pending';
+                                    $statusClassText = $statusClass[$appointment->status] ?? 'status-pending';
+                                @endphp
+                                <span class="appointment-status {{ $statusClassText }}">{{ $statusText }}</span>
+                            </div>
+                        @empty
+                            <p class="text-muted text-center py-3">No appointments yet. <a href="{{ route('patient.appointments') }}">Book one now!</a></p>
+                        @endforelse
+>>>>>>> 27979d3f7b824727488191a61692704f58d2dd50
                     </div>
 
                     <!-- Ambulance Requests -->
