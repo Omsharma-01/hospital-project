@@ -221,11 +221,18 @@
                                     <i class="bi bi-person-circle"></i>
                                     <span>{{ Auth::user()->name }}</span>
                                 </div>
-
-                                <a href="/dashboard" class="dashboard-btn">
-                                    <i class="bi bi-speedometer2"></i>
-                                    Dashboard
-                                </a>
+                                @if (Auth::user()->role === 'patient')
+                                    <a href="/patient/dashboard" class="dashboard-btn text-capitalize">
+                                        <i class="bi bi-speedometer2"></i>
+                                        {{ Auth::user()->role }} Dashboard
+                                    </a>
+                                @else
+                                    <a href="/admin/dashboard" class="dashboard-btn text-capitalize">
+                                        <i class="bi bi-speedometer2"></i>
+                                        {{ Auth::user()->role }} Dashboard
+                                    </a>
+                                @endif
+                            
 
                                 <a href="{{ url('logout') }}" class="logout-btn">
                                     <i class="bi bi-box-arrow-right"></i>

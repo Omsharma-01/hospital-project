@@ -252,7 +252,22 @@
                 <i class="bi bi-plus-lg"></i> Book Appointment
             </button>
         </div>
+      @if (session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
         <!-- Search -->
         <form action="{{ route('patient.appointments') }}" method="GET" class="search-box mb-4">
             <input type="text" name="search" class="form-control" placeholder="Search by doctor name..." value="{{ request('search') }}">
@@ -296,7 +311,7 @@
                                 <div class="appointment-date-time">
                                     <span class="day">{{ date('d', strtotime($appointment->appointment_date)) }}</span>
                                     <span class="month">{{ date('M', strtotime($appointment->appointment_date)) }}</span>
-                                    <span class="time">{{ $appointment->appointment_time }}</span>
+                                    <span class="time">{{ date('g:i A', strtotime($appointment->appointment_time)) }}</span>
                                 </div>
                                 <div>
                                     <p class="mb-0" style="font-size: 14px; font-weight: 500;">{{ $appointment->reason ?: 'Checkup' }}</p>
@@ -308,9 +323,9 @@
 
                             <div class="mt-3 d-flex gap-2">
                                 @if($appointment->status != 3 && $appointment->status != 2)
-                                    <form action="{{ route('patient.appointments.cancel', $appointment->id) }}" method="POST">
+                                    <form action="{{ route('patient.appointments.cancel', $appointment->id) }}" method="post">
                                         @csrf
-                                        @method('DELETE')
+                                        @method('post')
                                         <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to cancel this appointment?')">
                                             <i class="bi bi-x-circle"></i> Cancel
                                         </button>
@@ -403,6 +418,17 @@
                                 @foreach($doctors as $doctor)
                                     <option value="{{ $doctor->id }}" {{ old('doctor_id') == $doctor->id ? 'selected' : '' }}>
                                          {{ $doctor->doctor_name }} - {{ $doctor->specialization }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                            <div class="col-md-6">
+                            <label class="form-label">Select Hospital</label>
+                            <select name="hospital_id" class="form-select" required>
+                                <option value="">Choose Hospital</option>
+                                @foreach($hospitals as $hospital)
+                                    <option value="{{ $hospital->id }}" {{ old('hospital_id') == $hospital->id ? 'selected' : '' }}>
+                                         {{ $hospital->name }}
                                     </option>
                                 @endforeach
                             </select>

@@ -1711,7 +1711,7 @@
 
                                      </a>
 
-                                     <a href="/appointment/{{ $row->id }}" class="btn btn-book">
+                                     <a href="/patient/dashboard" class="btn btn-book">
 
                                          <i class="bi bi-calendar-check"></i>
                                          Book Appointment

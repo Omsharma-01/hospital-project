@@ -26,7 +26,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/logout', [AuthController::class, 'logout']);
     Route::get('/patient', [PatientController::class, 'getPatient']);
-    Route::get('/patient/{name}/{id}', [PatientController::class, 'getpatientName']);
+    // Route::get('/patient/{name}/{id}', [PatientController::class, 'getpatientName']);
 
     Route::middleware(['role:admin'])->group(function () {
         Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
@@ -144,7 +144,7 @@ Route::prefix('patient')->middleware(['auth', 'role:patient'])->group(function (
     // Appointments
     Route::get('/appointments', [DashboardController::class, 'appointments'])->name('patient.appointments');
     Route::post('/appointments', [DashboardController::class, 'storeAppointment'])->name('patient.appointments.store');
-    Route::delete('/appointments/{id}', [DashboardController::class, 'cancelAppointment'])->name('patient.appointments.cancel');
+    Route::post('/appointments/{id}', [DashboardController::class, 'cancelAppointment'])->name('patient.appointments.cancel');
     
     // Ambulance (using BookAmbulance table)
     Route::get('/ambulance', [DashboardController::class, 'ambulances'])->name('patient.ambulance');

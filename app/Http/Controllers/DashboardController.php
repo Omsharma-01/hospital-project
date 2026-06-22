@@ -9,6 +9,8 @@ use App\Models\Appointment;
 use App\Models\Ambulance;
 use App\Models\BookAmbulance;
 use App\Models\Doctor;
+use App\Models\Hospital;
+
 use App\Models\Patient;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -231,8 +233,10 @@ class DashboardController extends Controller
         
         // Get doctors for appointment booking modal
         $doctors = Doctor::where('status', 1)->get();
+        $hospitals = Hospital::where('status', 1)->get();
+
         
-        return view('patient.appointments', compact('appointments', 'doctors', 'patient'));
+        return view('patient.appointments', compact('appointments', 'doctors', 'patient', 'hospitals'));
     }
 
     /**
@@ -311,9 +315,18 @@ class DashboardController extends Controller
      */
     public function cancelAppointment($id)
     {
-        $appointment = Appointment::where('id', $id)
-            ->where('patient_id', Auth::user()->id)
+        // dump($id);
+        // dump(Auth::id());
+             $patientId = Patient::where('user_id', Auth::id())
             ->first();
+            
+            // dump($user_id->id);
+        $appointment = Appointment::where('id', $id)
+            ->where('patient_id', $patientId->id)
+            ->first();
+
+        // dump($appointment);
+
         
         if (!$appointment) {
             return redirect()->back()->with('error', 'Appointment not found.');

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Appointment;
 use App\Models\Doctor;
+use App\Models\Hospital;
+
 // use App\Models\Patient;
 
 class AppointmentController extends Controller
@@ -26,6 +28,7 @@ class AppointmentController extends Controller
         $doctor = Doctor::get();
         // $patient = Patient::get();
       return view('admin.appointment.create' , compact('doctor' , ));
+
         
     }
 
@@ -108,4 +111,5 @@ class AppointmentController extends Controller
         return redirect('admin/appointment/list')
                 ->with('success','Appointment deleted successfully');
     }
+    
 }
