@@ -103,8 +103,9 @@ class HomeController extends Controller
     public function getAppointment()
     {
         $doctor = Doctor::where('status', 1)->get();
+        $hospital = Hospital::where('status', 1)->get();
 
-        return view('appointment', compact('doctor'));
+        return view('appointment', compact('doctor', 'hospital'));
     }
 
     public function getambulance()
@@ -144,6 +145,7 @@ class HomeController extends Controller
             'patient_name' => $request->patient_name,
             'patient_id' => $patient->id,
             'doctor_id' => $request->doctor_id,
+            'hospital_id' => $request->hospital_id,
             'appointment_date' => $request->appointment_date,
             'appointment_time' => $request->appointment_time,
             'reason' => $request->reason,

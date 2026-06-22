@@ -213,7 +213,7 @@ class DashboardController extends Controller
         $patient = Patient::where('user_id', $user->id)->first();
         $patientId = $patient ? $patient->id : null;
         
-        $query = Appointment::where('patient_id', $patientId)->with('doctor');
+        $query = Appointment::where('patient_id', $patientId)->with('doctor', 'hospital');
         
         // Filter by status
         if ($request->has('status') && $request->status != '') {
@@ -302,6 +302,7 @@ class DashboardController extends Controller
             'doctor_id' => $request->doctor_id,
             'appointment_date' => $request->appointment_date,
             'appointment_time' => $request->appointment_time,
+            'hospital_id' => $request->hospital_id,
             'reason' => $request->reason,
             'status' => 0, // 0 = pending
         ]);

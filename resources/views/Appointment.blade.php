@@ -159,51 +159,64 @@
                          <h3 class="mb-4 text-center text-danger text-pink">
                              Appointment Form
                          </h3>
-                       
+
                          <form action="{{ route('appointment.store1') }}" method="POST">
-                                 @csrf
+                             @csrf
 
-                                 <div class="row g-3">
+                             <div class="row g-3">
 
-                                     <div class="col-md-6">
-                                         <label class="form-label">Full Name</label>
-                                         <input type="text" class="form-control" name="patient_name"
-                                             placeholder="Enter Full Name" required>
-                                     </div>
+                                 <div class="col-md-6">
+                                     <label class="form-label">Full Name</label>
+                                     <input type="text" class="form-control" name="patient_name"
+                                         placeholder="Enter Full Name" required>
+                                 </div>
 
-                                     <div class="col-md-6">
-                                         <label class="form-label">Phone Number</label>
-                                         <input type="tel" class="form-control" name="phone_number"
-                                             placeholder="Enter Phone Number" required>
-                                     </div>
+                                 <div class="col-md-6">
+                                     <label class="form-label">Phone Number</label>
+                                     <input type="tel" class="form-control" name="phone_number"
+                                         placeholder="Enter Phone Number" required>
+                                 </div>
 
-                                     <div class="col-md-6">
-                                         <label class="form-label">Age</label>
-                                         <input type="number" class="form-control" name="age" placeholder="Enter Age"
-                                             required>
-                                     </div>
+                                 <div class="col-md-6">
+                                     <label class="form-label">Age</label>
+                                     <input type="number" class="form-control" name="age" placeholder="Enter Age"
+                                         required>
+                                 </div>
 
-                                     <div class="col-md-6">
-                                         <label class="form-label">Gender</label>
-                                         <select class="form-select" name="gender" required>
-                                             <option value="">Select Gender</option>
-                                             <option value="Male">Male</option>
-                                             <option value="Female">Female</option>
-                                             <option value="Other">Other</option>
-                                         </select>
-                                     </div>
+                                 <div class="col-md-6">
+                                     <label class="form-label">Gender</label>
+                                     <select class="form-select" name="gender" required>
+                                         <option value="">Select Gender</option>
+                                         <option value="Male">Male</option>
+                                         <option value="Female">Female</option>
+                                         <option value="Other">Other</option>
+                                     </select>
+                                 </div>
 
-                                     <div class="col-md-6">
-                                         <label class="form-label">Select Doctor</label>
-                                         <select class="form-select" name="doctor_id" required>
-                                             <option value="">Choose Doctor</option>
-                                             @foreach ($doctor as $row)
-                                                 <option value="{{ $row->id }}">
-                                                     {{ $row->doctor_name }}
-                                                 </option>
-                                             @endforeach
-                                         </select>
-                                     </div>
+                                 <div class="col-md-6">
+                                     <label class="form-label">Select Doctor</label>
+                                     <select class="form-select" name="doctor_id" required>
+                                         <option value="">Choose Doctor</option>
+                                         @foreach ($doctor as $row)
+                                             <option value="{{ $row->id }}">
+                                                 {{ $row->doctor_name }}
+                                             </option>
+                                         @endforeach
+                                     </select>
+                                 </div>
+                                 <div class="col-md-6">
+                                     <label class="form-label">Select Hospital</label>
+                                     <select class="form-select" name="hospital_id" required>
+                                         <option value="">Choose Hospital</option>
+                                         @foreach ($hospital as $row)
+                                             <option value="{{ $row->id }}">
+                                                 {{ $row->name }}
+                                             </option>
+                                         @endforeach
+                                     </select>
+                                    </div>
+                             <div class="row g-3">
+
                                      <div class="col-md-6">
                                          <label class="form-label">Blood Group</label>
                                          <select class="form-select" name="boold_group" required>
@@ -221,8 +234,8 @@
 
                                      <div class="col-md-6">
                                          <label class="form-label">Address</label>
-                                         <input type="text" class="form-control" name="address" placeholder="Enter Address"
-                                             required>
+                                         <input type="text" class="form-control" name="address"
+                                             placeholder="Enter Address" required>
                                      </div>
                                      <div class="col-md-6">
                                          <label class="form-label">Appointment Date</label>
@@ -246,8 +259,8 @@
                                      </div>
 
                                  </div>
-                             </form>
-                         
+                         </form>
+
 
                      </div>
 

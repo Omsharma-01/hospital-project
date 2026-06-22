@@ -16,6 +16,7 @@ class Appointment extends Model
         'appointment_date',
         'appointment_time',
         'reason',
+        'hospital_id',
         'status'
     ];
 
@@ -36,6 +37,10 @@ class Appointment extends Model
         return $this->belongsTo(Patient::class, 'patient_id');
     }
 
+    public function hospital()
+    {
+        return $this->belongsTo(Hospital::class, 'hospital_id');
+    }
     // Accessor for status text
     public function getStatusTextAttribute()
     {

@@ -316,7 +316,7 @@
                                 <div>
                                     <p class="mb-0" style="font-size: 14px; font-weight: 500;">{{ $appointment->reason ?: 'Checkup' }}</p>
                                     <p class="text-muted mb-0" style="font-size: 13px;">
-                                        <i class="bi bi-geo-alt me-1"></i>{{ $appointment->doctor->address ?? 'Hospital' }}
+                                        <i class="bi bi-geo-alt me-1"></i>{{ $appointment->hospital->name ?? 'Hospital' }}
                                     </p>
                                 </div>
                             </div>
