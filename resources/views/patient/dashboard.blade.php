@@ -486,8 +486,8 @@
                                             class="month">{{ date('M', strtotime($appointment->appointment_date)) }}</span>
                                     </div>
                                     <div class="appointment-info">
-                                        <h6>Dr. {{ $appointment->doctor->doctor_name ?? 'N/A' }}</h6>
-                                        <small><i class="bi bi-clock me-1"></i>{{ $appointment->appointment_time }} -
+                                        <h6>{{ $appointment->doctor->doctor_name ?? 'N/A' }}</h6>
+                                        <small><i class="bi bi-clock me-1"></i>{{ date('h:i A', strtotime($appointment->appointment_time)) }} -
                                             {{ $appointment->doctor->specialization ?? 'General' }}</small>
                                     </div>
                                     @php

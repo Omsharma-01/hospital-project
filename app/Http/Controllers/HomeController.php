@@ -17,9 +17,10 @@ class HomeController extends Controller
     public function home()
     {
         $doctors = Doctor::where('status', 1)->get();
+        $services = Service::where('status', 1)->get();
         // dump($doctors);
 
-        return view('welcome', compact('doctors'));
+        return view('welcome', compact('doctors', 'services'));
     }
 
     public function getRegister()
@@ -117,9 +118,9 @@ class HomeController extends Controller
 
     public function gethospital()
     {
-        $tieups = Hospital::where('status', 1)->get();
+        $hospitals = Hospital::where('status', 1)->get();
 
-        return view('hospital', compact('tieups'));
+        return view('hospital', compact('hospitals'));
     }
 
     public function appointment_store(Request $request)
