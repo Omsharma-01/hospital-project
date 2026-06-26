@@ -232,7 +232,7 @@
                                         {{ Auth::user()->role }} Dashboard
                                     </a>
                                 @endif
-                            
+
 
                                 <a href="{{ url('logout') }}" class="logout-btn">
                                     <i class="bi bi-box-arrow-right"></i>
@@ -372,7 +372,7 @@
                         </li>
 
                         <li class="mb-2">
-                            <a href="/about" class="text-decoration-none text-dark">
+                            <a href="/about-us" class="text-decoration-none text-dark">
                                 About Us
                             </a>
                         </li>

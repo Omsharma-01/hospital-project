@@ -474,7 +474,7 @@
                         <div class="card-header">
                             <span><i class="bi bi-calendar3 me-2" style="color: var(--primary);"></i>Recent
                                 Appointments</span>
-                            <a href="{{ url('patient/appointments') }}" class="view-all">View All →</a>
+                            <a href="{{ route('patient.appointments') }}" class="view-all">View All →</a>
                         </div>
                         <div class="card-body">
                             @forelse($recentAppointments as $appointment)
@@ -486,8 +486,8 @@
                                             class="month">{{ date('M', strtotime($appointment->appointment_date)) }}</span>
                                     </div>
                                     <div class="appointment-info">
-                                        <h6>{{ $appointment->doctor->doctor_name ?? 'N/A' }}</h6>
-                                        <small><i class="bi bi-clock me-1"></i>{{ date('h:i A', strtotime($appointment->appointment_time)) }} -
+                                        <h6>Dr. {{ $appointment->doctor->doctor_name ?? 'N/A' }}</h6>
+                                        <small><i class="bi bi-clock me-1"></i>{{ $appointment->appointment_time }} -
                                             {{ $appointment->doctor->specialization ?? 'General' }}</small>
                                     </div>
                                     @php
@@ -508,11 +508,10 @@
                                     @endphp
                                     <span class="appointment-status {{ $statusClassText }}">{{ $statusText }}</span>
                                 </div>
-
-                                @empty
-                                    <p class="text-muted text-center py-3">No appointments yet. <a
-                                            href="{{ route('patient.appointments') }}">Book one now!</a></p>
-                                    @endforelse
+                            @empty
+                                <p class="text-muted text-center py-3">No appointments yet. <a
+                                        href="{{ route('patient.appointments') }}">Book one now!</a></p>
+                            @endforelse
                         </div>
                     </div>
 

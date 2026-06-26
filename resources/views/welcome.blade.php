@@ -1702,7 +1702,12 @@
 
                      <!-- Right Side -->
                      <div class="col-lg-8">
-                     image
+
+                         <img src="Assest/image/Contact.png" class="img-fluid rounded-4 shadow"
+                             alt="Mother Care Hospital">
+
+
+
                      </div>
 
                  </div>
