@@ -466,7 +466,7 @@
 
              <div class="text-center mb-5">
                  <span class="section-badge">🚑 Emergency Ambulance Service mamta wahan</span>
-                 <h2 class="mt-3 fw-bold">
+                 <h2 class="mt-3 fw-bold text-pink" >
                      24×7 Ambulance & Emergency Support
                  </h2>
                  <p class="text-muted">
@@ -475,57 +475,58 @@
              </div>
 
              <div class="row g-4">
+                 @foreach ($ambulance as $ambulance)
+                     <!-- Ambulance Card -->
 
-                 <!-- Ambulance Card -->
-                 <div class="col-lg-4 col-md-6">
-                     <div class="ambulance-card">
+                     <div class="col-lg-4 col-md-6">
+                         <div class="ambulance-card">
 
-                         <div class="status-badge">
-                             ● Active
-                         </div>
+                             <div class="status-badge">
+                                 ● Active
+                             </div>
 
-                         <div class="ambulance-icon">
-                             🚑
-                         </div>
+                             <div class="ambulance-icon">
+                                 🚑
+                             </div>
 
-                         <h4 class="fw-bold mb-3">
-                             Mother Care Ambulance
-                         </h4>
+                             <h4 class="fw-bold mb-3">
+                                  {{ $ambulance->ambulance_name }}
+                             </h4>
 
-                         <div class="info-item">
-                             <strong>Contact Number</strong>
-                             <p class="mb-0">+91 8409573224</p>
-                         </div>
+                             <div class="info-item">
+                                 <strong>Ambulance Number</strong>
+                                  {{ $ambulance->ambulance_no }}
+                             </div>
 
-                         <div class="info-item">
-                             <strong>Hospital Name</strong>
-                             <p class="mb-0">Mother Care Hospital</p>
-                         </div>
+                             <div class="info-item">
+                                 <strong>Driver Name</strong>
+                                 <p class="mb-0"> {{ $ambulance->driver_name }} </p>
+                             </div>
 
-                         <div class="info-item">
-                             <strong>Address</strong>
-                             <p class="mb-0">
-                                 Main Road, Ranchi, Jharkhand, India
-                             </p>
-                         </div>
+                             <div class="info-item">
+                                 <strong>Address</strong>
+                                  {{ $ambulance->address }}
+                             </div>
 
-                         <div class="d-flex gap-2 mt-4">
+                             <div class="d-flex gap-2 mt-4">
 
-                             <a href="tel:+919876543210" class="btn btn-call flex-fill">
-                                 Call Now
-                             </a>
+                                 <a href="tel:+919876543210" class="btn btn-call flex-fill">
+                                     Call Now
+                                 </a>
 
-                             <a href="https://maps.google.com" target="_blank" class="btn btn-map flex-fill">
+                                 {{-- <a href="https://maps.google.com" target="_blank" class="btn btn-map flex-fill">
                                  View Map
-                             </a>
+                             </a> --}}
+
+                             </div>
 
                          </div>
 
                      </div>
-                 </div>
+                 @endforeach
 
                  <!-- Duplicate card for multiple ambulances -->
-                 <div class="col-lg-4 col-md-6">
+                 {{-- <div class="col-lg-4 col-md-6">
                      <div class="ambulance-card">
 
                          <div class="status-badge">
@@ -541,7 +542,7 @@
                          </h4>
 
                          <div class="info-item">
-                             <strong>Contact Number</strong>
+                             <strong>Ambulance Number</strong>
                              <p class="mb-0">+91 8409573224</p>
                          </div>
 
@@ -568,7 +569,7 @@
                          </div>
 
                      </div>
-                 </div>
+                 </div> --}}
                  <div class="row g-4 mt-4">
 
                      <!-- Emergency Alert -->
