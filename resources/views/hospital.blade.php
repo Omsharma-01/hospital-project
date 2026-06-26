@@ -406,9 +406,7 @@
                                     <p>Obstetric Specialist</p>
                                 </div> --}}
 
-                                <button class="btn btn-tieup">
-                                    View Hospital
-                                </button>
+                                
 
                             </div>
                         </div>

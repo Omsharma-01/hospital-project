@@ -115,7 +115,7 @@
                 </p>
             </div>
 
-            <div class="row g-4">
+            {{-- <div class="row g-4"> --}}
 
                 <!-- Service 1 -->
                 <div class="row g-4">
@@ -170,7 +170,7 @@
                     @endforeach
                 </div>
 
-            </div>
+            {{-- </div> --}}
 
         </div>
 

@@ -44,7 +44,8 @@
                                      <label for="exampleInputCity1">File Upload</label>
                                      <input type="file" name='file_upload' class="form-control" id="exampleInputCity1"
                                          placeholder="file_upload">
-                                         <img src="{{ asset('uploads/service/'.$data->file_upload) }}" width="100">
+
+                                         <img src="{{ asset('uploads/services/'.$data->file_upload) }}" width="100">
 
                                  </div>
 

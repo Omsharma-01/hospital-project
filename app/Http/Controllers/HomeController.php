@@ -76,7 +76,7 @@ class HomeController extends Controller
 
     public function getService()
     {
-        $services = Service::get();
+        $services = Service::where('status', 1)->get();
 
         return view('service', compact('services'));
     }
