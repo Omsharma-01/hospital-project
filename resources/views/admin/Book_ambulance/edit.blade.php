@@ -64,7 +64,7 @@
                     <div class="form-group mb-3">
                         <label for="booking_date" class="form-label">Booking Date</label>
                         <input type="datetime-local" class="form-control @error('booking_date') is-invalid @enderror" 
-                            id="booking_date" name="booking_date" value="{{ $data->booking_date }}" required>
+                            id="booking_date" name="booking_date" value="{{ date('Y-m-d\TH:i', strtotime($data->booking_date)) }}" required>
                         @error('booking_date')
                             <span class="invalid-feedback">{{ $message }}</span>
                         @enderror

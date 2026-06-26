@@ -41,7 +41,17 @@
                                                 <td>{{ $row->appointment_date }}</td>
                                                 <td>{{ $row->appointment_time }}</td>
                                                 <td>{{ $row->reason }}</td>
-                                                <td>{{ $row->status === 1 ? 'Active ' : 'Inactive ' }}</td>
+                                                <td>
+                                                    @if ($row->status == 0)
+                                                        <span class="badge bg-warning">Pending</span>
+                                                    @elseif ($row->status == 1)
+                                                        <span class="badge bg-info">Confirmed</span>
+                                                    @elseif ($row->status == 2)
+                                                        <span class="badge bg-success">Completed</span>
+                                                    @elseif ($row->status == 3)
+                                                        <span class="badge bg-danger">Cancelled</span>
+                                                    @endif
+                                                </td>
                                                 <td class="d-flex">
 
                                                     <a class="btn btn-info m-1"

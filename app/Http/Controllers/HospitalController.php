@@ -12,8 +12,8 @@ class HospitalController extends Controller
      */
     public function index()
     {
-        $data = Hospital::orderBy('id', 'desc')->get();
-      return view('admin.hospital.list', compact('data'));
+       $hospitals = Hospital::all();
+    return view('hospitals.index', compact('hospitals'));
     }
 
     /**

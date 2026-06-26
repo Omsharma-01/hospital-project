@@ -353,61 +353,72 @@
                 <h2>25+</h2>
                 <p class="mb-0">Partner Hospitals & Specialists Across India</p>
             </div>
-
             <div class="row g-4">
+                @foreach ($hospitals as $hospital)
+                    <div class="col-lg-4">
+                        <div class="tieup-card">
 
-                <div class="col-lg-4">
-                    <div class="tieup-card">
-
-                        <div class="hospital-top">
-                            <div class="hospital-icon">
-                                <i class="bi bi-hospital"></i>
-                            </div>
-
-                            <h4 class="hospital-name">
-                                Apollo Hospital
-                            </h4>
-
-                            <div class="location">
-                                Ranchi, Jharkhand
-                            </div>
-
-                            <div class="stats">
-                                <div>
-                                    <h5>12</h5>
-                                    <span>Doctors</span>
+                            <div class="hospital-top">
+                                <div class="hospital-icon">
+                                    <i class="bi bi-hospital"></i>
                                 </div>
 
-                                <div>
-                                    <h5>24×7</h5>
-                                    <span>Emergency</span>
+                                <h4 class="hospital-name">
+                                    {{ $hospital->name }}
+                                </h4>
+
+                                <div class="address">
+                                    {{ $hospital->address }}                                    
                                 </div>
 
-                                <div>
-                                    <h5>15+</h5>
-                                    <span>Years</span>
+                                 <div class="city">
+                                    {{ $hospital->city }}
+                             </div>
+
+                              <div class="email">
+                                    {{ $hospital->email }}
+                             </div>
+{{-- 
+                                <div class="stats">
+                                    <div>
+                                        <h5>12</h5>
+                                        <span>Doctors</span>
+                                    </div>
+
+                                    <div>
+                                        <h5>24×7</h5>
+                                        <span>Emergency</span>
+                                    </div>
+
+                                    <div>
+                                        <h5>15+</h5>
+                                        <span>Years</span>
+                                    </div>
                                 </div>
+
+                                <div class="doctor-box">
+                                    <h6>Dr. Rajesh Kumar</h6>
+                                    <p>Senior Gynecologist</p>
+                                </div>
+
+                                <div class="doctor-box">
+                                    <h6>Dr. Priya Sharma</h6>
+                                    <p>Obstetric Specialist</p>
+                                </div> --}}
+
+                                <button class="btn btn-tieup">
+                                    View Hospital
+                                </button>
+
                             </div>
-
-                            <div class="doctor-box">
-                                <h6>Dr. Rajesh Kumar</h6>
-                                <p>Senior Gynecologist</p>
-                            </div>
-
-                            <div class="doctor-box">
-                                <h6>Dr. Priya Sharma</h6>
-                                <p>Obstetric Specialist</p>
-                            </div>
-
-                            <button class="btn btn-tieup">
-                                View Hospital
-                            </button>
-
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="col-lg-4">
+
+
+
+                {{-- <div class="col-lg-4">
                     <div class="tieup-card">
 
                         <div class="hospital-top">
@@ -456,9 +467,9 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
                     <div class="tieup-card">
 
                         <div class="hospital-top">
@@ -507,7 +518,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
 

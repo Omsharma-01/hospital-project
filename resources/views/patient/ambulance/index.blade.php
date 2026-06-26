@@ -56,7 +56,7 @@
     }
 
     .btn-primary-custom:hover {
-        background: var(--primary-dark);
+     
         color: #fff;
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(246,77,134,0.3);

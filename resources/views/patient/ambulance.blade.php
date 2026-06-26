@@ -51,7 +51,7 @@
     }
 
     .btn-primary-custom:hover {
-        background: var(--primary-dark);
+       
         color: #fff;
         transform: translateY(-2px);
     }

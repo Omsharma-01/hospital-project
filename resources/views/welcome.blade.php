@@ -1383,172 +1383,63 @@
                      provide complete healthcare services for mothers, babies, and families.
                  </p>
              </div>
-
              <div class="row g-4">
+                 @foreach ($services as $service)
+                     <div class="col-lg-4 col-md-6">
+                         <div class="card service-card border-0 shadow-lg h-100 rounded-4 overflow-hidden">
 
-                 <!-- Service 1 -->
-                 <div class="col-lg-4 col-md-6">
-                     <div class="card service-card border-0 shadow-sm h-100">
-                         <img src="uploads/doctors/pa.jpg" class="card-img-top" alt="Prenatal Care">
-
-                         <div class="card-body text-center p-4">
-
-                             <div class="service-icon">
-                                 <i class="bi bi-heart-pulse-fill"></i>
+                             <!-- Service Image -->
+                             <div class="service-image">
+                                 <img src="{{ asset('uploads/services/' . $service->file_upload) }}"
+                                     alt="{{ $service->service_name }}" class="img-fluid w-100 h-100"
+                                     style="height:100px; object-fit:cover;">
                              </div>
 
-                             <h4 class="mt-4">Prenatal Care</h4>
+                             <!-- Card Body -->
+                             <div class="card-body p-4">
 
-                             <p class="text-muted">
-                                 Regular checkups, ultrasounds, nutrition guidance,
-                                 and personalized pregnancy monitoring.
-                             </p>
+                                 <h4 class="fw-bold text-dark mb-3">
+                                     {{ $service->service_name }}
+                                 </h4>
 
-                             <a href="#" class="btn btn-outline-pink">
-                                 Learn More
-                             </a>
+                                 <p class="text-muted small">
+                                     {{ Str::limit($service->description, 120) }}
+                                 </p>
 
-                         </div>
+                                 <hr>
 
-                     </div>
-                 </div>
+                                 <div class="d-flex justify-content-between mb-2">
+                                     <span class="fw-semibold">💰 Price</span>
+                                     <span class="text-success fw-bold">
+                                         ₹{{ number_format($service->price) }}
+                                     </span>
+                                 </div>
 
-                 <!-- Service 2 -->
-                 <div class="col-lg-4 col-md-6">
-                     <div class="card service-card border-0 shadow-sm h-100">
-                         <img src="uploads/doctors/pa.jpg" class="card-img-top" alt="Delivery Care">
+                                 <div class="d-flex justify-content-between mb-2">
+                                     <span class="fw-semibold">⏳ Duration</span>
+                                     <span>{{ $service->duration }}</span>
+                                 </div>
 
-                         <div class="card-body text-center p-4">
+                                 <div class="d-flex justify-content-between mb-3">
+                                     <span class="fw-semibold">📂 Category</span>
+                                     <span class="badge bg-primary">
+                                         {{ $service->category }}
+                                     </span>
+                                 </div>
 
-                             <div class="service-icon">
-                                 <i class="bi bi-hospital-fill"></i>
+
                              </div>
 
-                             <h4 class="mt-4">Delivery Care</h4>
-
-                             <p class="text-muted">
-                                 Advanced birthing suites and expert medical support
-                                 for safe deliveries.
-                             </p>
-
-                             <a href="#" class="btn btn-outline-pink">
-                                 Learn More
-                             </a>
-
                          </div>
-
                      </div>
-                 </div>
-
-                 <!-- Service 3 -->
-                 <div class="col-lg-4 col-md-6">
-                     <div class="card service-card border-0 shadow-sm h-100">
-                         <img src="uploads/doctors/psupp.jpg" class="card-img-top" alt="Postnatal Support">
-                         <div class="card-body text-center p-4">
-                             <div class="service-icon">
-                                 <i class="bi bi-people-fill"></i>
-                             </div>
-
-                             <h4 class="mt-4">Postnatal Support</h4>
-
-                             <p class="text-muted">
-                                 Recovery programs, breastfeeding support,
-                                 and emotional wellness care.
-                             </p>
-
-                             <a href="#" class="btn btn-outline-pink">
-                                 Learn More
-                             </a>
-
-                         </div>
-
-                     </div>
-                 </div>
-
-                 <!-- Service 4 -->
-                 <div class="col-lg-4 col-md-6">
-                     <div class="card service-card border-0 shadow-sm h-100">
-                         <img src="uploads/doctors/ch1.jpg" class="card-img-top" alt="Pediatric Care">
-                         <div class="card-body text-center p-4">
-
-                             <div class="service-icon">
-                                 <i class="bi bi-bandaid-fill "></i>
-                             </div>
-
-                             <h4 class="mt-4">Pediatric Care</h4>
-
-                             <p class="text-muted">
-                                 Vaccinations, routine health checks,
-                                 and specialized child healthcare.
-                             </p>
-
-                             <a href="#" class="btn btn-outline-pink">
-                                 Learn More
-                             </a>
-
-                         </div>
-
-                     </div>
-                 </div>
-
-                 <!-- Service 5 -->
-                 <div class="col-lg-4 col-md-6">
-                     <div class="card service-card border-0 shadow-sm h-100">
-                         <img src="uploads/doctors/ch2.jpg" class="card-img-top" alt="Reproductive Health">
-                         <div class="card-body text-center p-4">
-
-                             <div class="service-icon">
-                                 <i class="bi bi-people-fill"></i>
-                             </div>
-
-                             <h4 class="mt-4">Reproductive Health</h4>
-
-                             <p class="text-muted">
-                                 Family planning, fertility consultations,
-                                 and reproductive healthcare services.
-                             </p>
-
-                             <a href="#" class="btn btn-outline-pink">
-                                 Learn More
-                             </a>
-
-                         </div>
-
-                     </div>
-                 </div>
-
-                 <!-- Service 6 -->
-                 <div class="col-lg-4 col-md-6">
-                     <div class="card service-card border-0 shadow-sm h-100">
-                         <img src="uploads/doctors/ch3.jpg" class="card-img-top" alt="Women's Wellness">
-                         <div class="card-body text-center p-4">
-
-                             <div class="service-icon">
-                                 <i class="bi bi-person-hearts"></i>
-                             </div>
-
-                             <h4 class="mt-4">Women's Wellness</h4>
-
-                             <p class="text-muted">
-                                 Exercise programs, pelvic floor therapy,
-                                 and overall health improvement.
-                             </p>
-
-                             <a href="#" class="btn btn-outline-pink">
-                                 Learn More
-                             </a>
-
-                         </div>
-
-                     </div>
-                 </div>
-
+                 @endforeach
              </div>
+
 
          </div>
 
      </section>
-     <h1 class="text-dark text-center mt-5">OUR SERVICES: COMPREHENSIVE CARE FOR EVERY STEP.</h1>
+     {{-- <h1 class="text-dark text-center mt-5">OUR SERVICES: COMPREHENSIVE CARE FOR EVERY STEP.</h1> --}}
 
      <section class="py-5">
          <div class="container">
@@ -1683,7 +1574,7 @@
                                      alt="{{ $row->doctor_name }}">
 
                                  <span class="exp-badge">
-                                     {{ $row->experience }}+ Years
+                                     {{ $row->experience }}+
                                  </span>
 
                              </div>
@@ -1811,60 +1702,7 @@
 
                      <!-- Right Side -->
                      <div class="col-lg-8">
-                         <div class="appointment-form">
-
-                             <h3 class="mb-4">
-                                 <i class="fas fa-calendar-check me-2"></i>
-                                 Book Appointment
-                             </h3>
-
-                             <form>
-
-                                 <div class="row">
-
-                                     <div class="col-md-6 mb-3">
-                                         <input type="text" class="form-control" placeholder="Full Name">
-                                     </div>
-
-                                     <div class="col-md-6 mb-3">
-                                         <input type="email" class="form-control" placeholder="Email Address">
-                                     </div>
-
-                                     <div class="col-md-6 mb-3">
-                                         <input type="tel" class="form-control" placeholder="Phone Number">
-                                     </div>
-
-                                     <div class="col-md-6 mb-3">
-                                         <input type="date" class="form-control">
-                                     </div>
-
-                                     <div class="col-md-12 mb-3">
-                                         <select class="form-select">
-                                             <option>Select Department</option>
-                                             <option>Gynecology</option>
-                                             <option>Pediatrics</option>
-                                             <option>Cardiology</option>
-                                             <option>Orthopedics</option>
-                                             <option>Emergency</option>
-                                         </select>
-                                     </div>
-
-                                     <div class="col-12 mb-3">
-                                         <textarea class="form-control" placeholder="Write Your Message"></textarea>
-                                     </div>
-
-                                     <div class="text-center">
-                                         <button type="submit" class="btn btn-appointment">
-                                             <i class="fas fa-paper-plane me-2"></i>
-                                             Book Appointment
-                                         </button>
-                                     </div>
-
-                                 </div>
-
-                             </form>
-
-                         </div>
+                     image
                      </div>
 
                  </div>

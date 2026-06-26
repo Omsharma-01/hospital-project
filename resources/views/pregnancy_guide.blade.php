@@ -241,7 +241,7 @@
 
              <div class="col-lg-4">
                  <div class="guide-card card">
-                     <img src="{{ asset('Assest/image/hos.image.png') }}" class="card-img-top">
+                     <img src="{{ asset('Assest/image/10m.jpg') }}" class="card-img-top">
                      <div class="card-body text-center">
                          <div class="guide-icon">
                              <i class="bi bi-basket2-fill"></i>
@@ -708,12 +708,12 @@
                  <!-- CTA Buttons -->
                  <div class="text-center mt-5" data-aos="zoom-in">
 
-                     <a href="/appointment" class="btn btn-danger btn-lg cta-btn me-2">
+                     <a href="/appointment" class="btn btn-pink btn-lg cta-btn me-2">
                          <i class="bi bi-calendar-heart-fill"></i>
                          Book Appointment
                      </a>
 
-                     <a href="tel:+917050505083" class="btn btn-outline-danger btn-lg cta-btn">
+                     <a href="tel:+917050505083" class="btn btn-pink btn-lg cta-btn me-2">
                          <i class="bi bi-telephone-fill"></i>
                          Emergency Call
                      </a>
