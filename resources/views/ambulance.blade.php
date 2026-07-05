@@ -578,12 +578,12 @@
                              <i class="bi bi-bell-fill fs-1 text-danger"></i>
                              <h5 class="mt-3">Emergency Alert</h5>
                              <p>
-                                 Send instant emergency alerts for immediate ambulance dispatch.
+                                Send instant emergency alerts for immediate ambulance dispatch.
                              </p>
-                             <button class="btn btn-danger">
+                             {{-- <button class="btn btn-danger">
                                  <i class="bi bi-exclamation-triangle-fill"></i>
                                  SOS Alert
-                             </button>
+                             </button> --}}
                          </div>
                      </div>
 
@@ -593,10 +593,10 @@
                              <i class="bi bi-truck fs-1 text-success"></i>
                              <h5 class="mt-3">Ambulance Status</h5>
                              <p>Current Status</p>
-
+{{-- 
                              <span class="badge bg-success fs-6">
                                  Available
-                             </span>
+                             </span> --}}
 
                              <!-- Example -->
                              <!-- On Duty -->
@@ -613,10 +613,10 @@
                                  Track ambulance location in real time.
                              </p>
 
-                             <a href="#" class="btn btn-primary">
+                             {{-- <a href="#" class="btn btn-primary">
                                  <i class="bi bi-map"></i>
                                  View Location
-                             </a>
+                             </a> --}}
                          </div>
                      </div>
 

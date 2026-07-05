@@ -532,8 +532,8 @@
 
                  <!-- Left Content -->
                  <div class="col-lg-6" data-aos="fade-right">
-                     <span class="badge bg-light text-danger px-3 py-2 mb-3" data-aos="flip-right">
-                         ❤️ Trusted Pregnancy Care Center
+                     <span class="badge bg-light text-pink px-3 py-2 mb-3" data-aos="flip-right">
+                         <span style="font-size:20px;">🩷</span> Trusted Pregnancy Care Center
                      </span>
 
                      <h1 class="display-4 fw-bold">

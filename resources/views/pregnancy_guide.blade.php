@@ -118,10 +118,10 @@
                  and trimester care to ensure a healthy pregnancy journey.
              </p>
 
-             <a href="#" class="btn btn-light mt-3">
+             {{-- <a href="#" class="btn btn-light mt-3">
                  <i class="bi bi-calendar-check"></i>
                  Book Appointment
-             </a>
+             </a> --}}
 
          </div>
 
@@ -129,79 +129,79 @@
 
      <!-- <section class="container py-5">
 
-                                 <div class="row g-4">
+                                     <div class="row g-4">
 
-                                     <div class="col-md-3">
-                                         <div class="feature-box">
-                                             <i class="bi bi-heart-pulse-fill"></i>
-                                             <h5 class="mt-3">Doctor Advice</h5>
-                                             <p>Regular consultations with specialists.</p>
+                                         <div class="col-md-3">
+                                             <div class="feature-box">
+                                                 <i class="bi bi-heart-pulse-fill"></i>
+                                                 <h5 class="mt-3">Doctor Advice</h5>
+                                                 <p>Regular consultations with specialists.</p>
+                                             </div>
                                          </div>
+
+                                         <div class="col-md-3">
+                                             <div class="feature-box">
+                                                 <i class="bi bi-egg-fried"></i>
+                                                 <h5 class="mt-3">Healthy Nutrition</h5>
+                                                 <p>Balanced diet rich in vitamins and minerals.</p>
+                                             </div>
+                                         </div>
+
+                                         <div class="col-md-3">
+                                             <div class="feature-box">
+                                                 <i class="bi bi-activity"></i>
+                                                 <h5 class="mt-3">Safe Exercise</h5>
+                                                 <p>Light workouts and pregnancy yoga sessions.</p>
+                                             </div>
+                                         </div>
+
+                                         <div class="col-md-3">
+                                             <div class="feature-box">
+                                                 <i class="bi bi-shield-check"></i>
+                                                 <h5 class="mt-3">Mother Safety</h5>
+                                                 <p>24/7 monitoring and emergency support.</p>
+                                             </div>
+                                         </div>
+
                                      </div>
 
-                                     <div class="col-md-3">
-                                         <div class="feature-box">
-                                             <i class="bi bi-egg-fried"></i>
-                                             <h5 class="mt-3">Healthy Nutrition</h5>
-                                             <p>Balanced diet rich in vitamins and minerals.</p>
-                                         </div>
-                                     </div>
-
-                                     <div class="col-md-3">
-                                         <div class="feature-box">
-                                             <i class="bi bi-activity"></i>
-                                             <h5 class="mt-3">Safe Exercise</h5>
-                                             <p>Light workouts and pregnancy yoga sessions.</p>
-                                         </div>
-                                     </div>
-
-                                     <div class="col-md-3">
-                                         <div class="feature-box">
-                                             <i class="bi bi-shield-check"></i>
-                                             <h5 class="mt-3">Mother Safety</h5>
-                                             <p>24/7 monitoring and emergency support.</p>
-                                         </div>
-                                     </div>
-
-                                 </div>
-
-                             </section> -->
+                                 </section> -->
      <!--
-                             <section class="container py-5">
+                                 <section class="container py-5">
 
-                                 <h2 class="text-center fw-bold mb-5">
-                                     Pregnancy Journey Timeline
-                                 </h2>
+                                     <h2 class="text-center fw-bold mb-5">
+                                         Pregnancy Journey Timeline
+                                     </h2>
 
-                                 <div class="timeline">
+                                     <div class="timeline">
 
-                                     <div class="timeline-item">
-                                         <h4 class="text-danger">First Trimester (1-12 Weeks)</h4>
-                                         <p>
-                                             Begin prenatal visits, take folic acid,
-                                             maintain hydration, and avoid harmful substances.
-                                         </p>
+                                         <div class="timeline-item">
+                                             <h4 class="text-danger">First Trimester (1-12 Weeks)</h4>
+                                             <p>
+                                                 Begin prenatal visits, take folic acid,
+                                                 maintain hydration, and avoid harmful substances.
+                                             </p>
+                                         </div>
+
+                                         <div class="timeline-item">
+                                             <h4 class="text-danger">Second Trimester (13-26 Weeks)</h4>
+                                             <p>
+                                                 Growth scans, nutritional monitoring,
+                                                 regular exercise, and baby development tracking.
+                                             </p>
+                                         </div>
+
+                                         <div class="timeline-item">
+                                             <h4 class="text-danger">Third Trimester (27-40 Weeks)</h4>
+                                             <p>
+                                                 Delivery planning, hospital preparation,
+                                                 fetal monitoring, and childbirth education.
+                                             </p>
+                                         </div>
+
                                      </div>
 
-                                     <div class="timeline-item">
-                                         <h4 class="text-danger">Second Trimester (13-26 Weeks)</h4>
-                                         <p>
-                                             Growth scans, nutritional monitoring,
-                                             regular exercise, and baby development tracking.
-                                         </p>
-                                     </div>
-
-                                     <div class="timeline-item">
-                                         <h4 class="text-danger">Third Trimester (27-40 Weeks)</h4>
-                                         <p>
-                                             Delivery planning, hospital preparation,
-                                             fetal monitoring, and childbirth education.
-                                         </p>
-                                     </div>
-
-                                 </div>
-
-                             </section> -->
+                                 </section> -->
 
      <section class="container py-5">
 
@@ -507,6 +507,13 @@
                  color: #fff;
              }
 
+             .bg-pink {
+                 background-color: #ff4fa3 !important;
+                 color: #fff !important;
+             }
+
+
+
              @keyframes emergencyPulse {
                  0% {
                      box-shadow: 0 0 0 0 rgba(220, 53, 69, .5);
@@ -535,7 +542,7 @@
                  <!-- Heading -->
                  <div class="text-center mb-5" data-aos="fade-up">
 
-                     <span class="badge bg-danger px-3 py-2 rounded-pill">
+                     <span class="badge bg-danger px-3 py-2 rounded-pill bg-pink ">
                          Pregnancy Journey
                      </span>
 
@@ -564,7 +571,7 @@
 
                          <div class="hero-card">
 
-                             <h3 class="text-danger fw-bold">
+                             <h3 class="text-pink fw-bold">
                                  Expert Pregnancy Care
                              </h3>
 
@@ -575,7 +582,7 @@
                              </p>
 
                              <div class="progress mt-4" style="height:15px;border-radius:50px;">
-                                 <div class="progress-bar bg-danger" style="width:100%">
+                                 <div class="progress-bar bg-pink" style="width:100%">
                                      Complete Pregnancy Care
                                  </div>
                              </div>
@@ -583,17 +590,17 @@
                              <div class="row text-center mt-4">
 
                                  <div class="col-4">
-                                     <i class="bi bi-heart-pulse-fill text-danger fs-1"></i>
+                                     <i class="bi bi-heart-pulse-fill text-pink fs-1"></i>
                                      <p class="small mt-2">Healthy Mother</p>
                                  </div>
 
                                  <div class="col-4">
-                                     <i class="bi bi-person-hearts text-danger fs-1"></i>
+                                     <i class="bi bi-person-hearts text-pink fs-1"></i>
                                      <p class="small mt-2">Expert Care</p>
                                  </div>
 
                                  <div class="col-4">
-                                     <i class="bi bi-balloon-heart-fill text-danger fs-1"></i>
+                                     <i class="bi bi-balloon-heart-fill text-pink fs-1"></i>
                                      <p class="small mt-2">Healthy Baby</p>
                                  </div>
 
