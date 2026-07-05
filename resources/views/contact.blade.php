@@ -180,7 +180,7 @@
                                  </div>
                                  <div class="info-content">
                                      <h6>Address</h6>
-                                     <p class="mb-0">Mithapur, Patna, Bihar - 800001</p>
+                                     <p class="mb-0">Hazaribagh,Jharkhand - 825301</p>
                                  </div>
                              </div>
 
@@ -190,7 +190,7 @@
                                  </div>
                                  <div class="info-content">
                                      <h6>Phone</h6>
-                                     <p class="mb-0">+91 7050505083</p>
+                                     <p class="mb-0">+91 8084888699</p>
                                  </div>
                              </div>
 

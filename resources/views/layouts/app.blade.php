@@ -419,12 +419,12 @@
 
                         <div class="contact-item mb-3">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Mother Care Hospital, Patna, Bihar</span>
+                            <span>Mother Care Hospital, Hazaribagh, Jharkhand</span>
                         </div>
 
                         <div class="contact-item mb-3">
                             <i class="fas fa-phone-alt"></i>
-                            <a href="tel:+919876543210">+91 98765 43210</a>
+                            <a href="tel:+918084888699">+91 80848 88699</a>
                         </div>
 
                         <div class="contact-item mb-3">
