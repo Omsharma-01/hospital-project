@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Hospital;
+use Illuminate\Http\Request;
 
 class HospitalController extends Controller
 {
@@ -12,8 +12,9 @@ class HospitalController extends Controller
      */
     public function index()
     {
-       $hospitals = Hospital::all();
-    return view('hospitals.index', compact('hospitals'));
+        $hospitals = Hospital::all();
+
+        return view('admin.hospital.list', compact('hospitals'));
     }
 
     /**
@@ -21,8 +22,8 @@ class HospitalController extends Controller
      */
     public function create()
     {
-      return view('admin.hospital.create');
-        
+        return view('admin.hospital.create');
+
     }
 
     /**
@@ -36,11 +37,11 @@ class HospitalController extends Controller
             'city' => $request->city,
             'pin_code' => $request->pin_code,
             'email' => $request->email,
-            'status' => $request->status
+            'status' => $request->status,
         ]);
 
         return redirect('admin/hospital/list')
-                         ->with('success', 'Hospital added successfully');
+            ->with('success', 'Hospital added successfully');
     }
 
     /**
@@ -48,9 +49,10 @@ class HospitalController extends Controller
      */
     public function show(string $id)
     {
-        
-              $hospital = Hospital::findorfail($id);
-        return view('admin.hospital.view',compact('hospital') );
+
+        $hospital = Hospital::findorfail($id);
+
+        return view('admin.hospital.view', compact('hospital'));
     }
 
     /**
@@ -58,10 +60,10 @@ class HospitalController extends Controller
      */
     public function edit(string $id)
     {
-        
+
         $data = Hospital::findorfail($id);
-        
-        return view('admin.hospital.edit', compact('data')); 
+
+        return view('admin.hospital.edit', compact('data'));
     }
 
     /**
@@ -71,17 +73,17 @@ class HospitalController extends Controller
     {
         $hospital = Hospital::findorfail($id);
 
-         $hospital->update([
+        $hospital->update([
             'name' => $request->name,
             'address' => $request->address,
             'city' => $request->city,
             'pin_code' => $request->pin_code,
             'email' => $request->email,
-            'status' => $request->status
+            'status' => $request->status,
         ]);
 
         return redirect('admin/hospital/list')
-                         ->with('success', 'Hospital added successfully');
+            ->with('success', 'Hospital added successfully');
     }
 
     /**
@@ -92,9 +94,9 @@ class HospitalController extends Controller
         $hospital = Hospital::findorfail($id);
 
         $hospital->delete();
-        //record deleted
-        
+        // record deleted
+
         return redirect('admin/hospital/list')
-                         ->with('success', 'Hospital added successfully');
+            ->with('success', 'Hospital added successfully');
     }
 }

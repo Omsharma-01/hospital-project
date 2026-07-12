@@ -31,7 +31,7 @@
                                      </thead>
                                      <tbody>
                                       <?php $i=1; ?>
-                                         @foreach ($data as $row)
+                                         @foreach ($hospitals as $row)
                                              <tr>
                                                  <td>{{$i++}}</td>
                                                  <td>{{$row->name}}</td>

@@ -106,7 +106,7 @@ class HomeController extends Controller
         $doctor = Doctor::where('status', 1)->get();
         $hospital = Hospital::where('status', 1)->get();
 
-        return view('appointment', compact('doctor', 'hospital'));
+        return view('Appointment', compact('doctor', 'hospital'));
     }
 
     public function getambulance()
